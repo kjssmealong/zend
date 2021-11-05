@@ -6,19 +6,12 @@ class IndexController extends Mylib_Controller_Action{
     }
 
     public function indexAction(){
-        $db = Zend_Registry::get('connectDb');
-        //select
-        $rows = $db->fetchAll('SELECT * FROM user');
-
-        echo $mode = Zend_Db::FETCH_ASSOC;
-        $db->setFetchMode($mode);
-//        echo '<pre>';
-//        print_r($db);
-//        echo '</pre>';
+       $tblUser = new Default_Model_Test();
+       $rows = $tblUser->getUser();
     }
 
     public function viewAction(){
-        echo '<br' . __METHOD__;
+
     }
 
 }

@@ -4,7 +4,6 @@ class Mylib_Controller_Action extends Zend_Controller_Action
 
     public function init()
     {
-
         $template_path = TEMPLATE_PATH . "/admin/system";
         $this->loadTemplate($template_path, 'template.ini', 'template');
     }
@@ -14,9 +13,7 @@ class Mylib_Controller_Action extends Zend_Controller_Action
         $fileName = $template_path . "/" . $fileConfig;
         $section = $sectionConfig;
         $config = new Zend_Config_Ini($fileName, $section);
-
         $config = $config->toArray();
-
         $baseUrl = $this->_request->getBaseUrl();
         $templateUrl = $baseUrl . $config['url'];
         $cssUrl = $templateUrl . $config['dirCss'];
@@ -41,7 +38,7 @@ class Mylib_Controller_Action extends Zend_Controller_Action
         //nap css
         if (count($config['fileCss']) > 0) {
             foreach ($config['fileCss'] as $key => $css) {
-                $this->view->headLink()->appendStylesheet($cssUrl . $css, "screen");
+                $this->view->headLink()->appendStylesheet($cssUrl . $css, 'screen');
             }
         }
 
