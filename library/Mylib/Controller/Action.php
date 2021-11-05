@@ -41,7 +41,7 @@ class Mylib_Controller_Action extends Zend_Controller_Action
         //nap css
         if (count($config['fileCss']) > 0) {
             foreach ($config['fileCss'] as $key => $css) {
-                $this->view->headLink()->appendStylesheet($cssUrl . $css, 'screen');
+                $this->view->headLink()->appendStylesheet($cssUrl . $css, "screen");
             }
         }
 

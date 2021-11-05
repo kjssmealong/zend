@@ -15,6 +15,7 @@ set_include_path(implode(PATH_SEPARATOR, array(
     get_include_path(),
 )));
 
+
 //Đường dẫn đến thư mục public
 define('PUBLIC_BATH', realpath(dirname(__FILE__) . '/public'));
 
