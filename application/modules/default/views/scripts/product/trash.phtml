@@ -1,0 +1,59 @@
+<?php
+$linkBack = $this->baseUrl($this->currentController . '/index');
+$linkDel = $this->baseUrl($this->currentController . '/deltrash/id/');
+$linkRestore = $this->baseUrl($this->currentController . '/restore/id/');
+?>
+<div class="content-wrapper my-2">
+    <div class="card">
+        <div class="card-header">
+            <div class="row">
+                <div class="col-md-6">
+                    <strong  class='text-danger'>
+                        DANH SÁCH SẢN PHẨM RÁC
+                    </strong>
+                </div>
+                <div class="col-md-6 text-right">
+                    <a class="btn btn-sm btn-success" href="<?php echo $linkBack; ?>">
+                        <i class="fas fa-reply">
+                        </i>Quay lại</a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+            <table id = "myTable" class="table table-triped table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th style="width:100px;">Hình</th>
+                        <th>Tên sản phẩm</th>
+                        <th>Loài sản phẩm</th>
+                        <th class="text-center">Chức năng</th>
+                        <th class="text-center" style="width: 20px;">ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <?php foreach($this->Items  as $row) : ?>
+                    <tr>
+                        <th>
+                            <img src="<?php echo $this->imgUrl . '/' . $row['img']; ?>" class="img-fluid" style="width:100px; height:100px;">
+                        </th>
+                        <td><?php echo $row['name']; ?></td>
+                        <td><?php echo $row['catid']; ?></td>
+                        <td class="text-center" style="padding-top: 35px">
+                        <a class="btn btn-sm btn-success" 
+                        href="<?php echo $linkRestore.$row['id']; ?>"><i class="fas fa-trash-restore"></i></a>
+                        <a class="btn btn-sm btn-danger" 
+                        href="<?php echo $linkDel.$row['id']; ?>"><i class="fas fa-trash"></i></a>
+                        </td>
+                        <td class="text-center"><?php echo $row['id']; ?></td>
+                    </tr>
+                <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+        $('#myTable').DataTable();
+    });
+</script>

@@ -4,12 +4,14 @@ class Mylib_Controller_Action extends Zend_Controller_Action
 
     public function init()
     {
-        $template_path = TEMPLATE_PATH . "/admin/system";
-        $this->loadTemplate($template_path, 'template.ini', 'template');
+       
     }
     public function loadTemplate($template_path, $fileConfig = 'template.ini', $sectionConfig = 'template')
     {
-
+        $this->view->headTitle()->getContainer()->exchangeArray(array());
+        $this->view->headMeta()->getContainer()->exchangeArray(array());
+        $this->view->headLink()->getContainer()->exchangeArray(array());
+        $this->view->headScript()->getContainer()->exchangeArray(array());
         $fileName = $template_path . "/" . $fileConfig;
         $section = $sectionConfig;
         $config = new Zend_Config_Ini($fileName, $section);
@@ -19,7 +21,6 @@ class Mylib_Controller_Action extends Zend_Controller_Action
         $cssUrl = $templateUrl . $config['dirCss'];
         $jsUrl = $templateUrl . $config['dirJs'];
         $imgUrl = $templateUrl . $config['dirImg'];
-
         //nạp title
         $this->view->headTitle($config['title']);
         //nạp meta
