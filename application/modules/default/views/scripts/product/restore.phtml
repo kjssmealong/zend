@@ -1,0 +1,25 @@
+<?php
+$row = $this->Item;
+$linkBack = $this->baseUrl($this->currentController . '/index');
+$linkRestore = $this->baseUrl($this->currentController . '/Restore/id/' . $row['id']);
+?>
+<form name="appForm" action="" method="post" enctype="multipart/form-data">
+    <div class="content-wrapper my-2">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        <strong class='text-danger'>
+                            BẠN CÓ MUỐN KHÔI PHỤC SẢN PHẨM : <?php echo $this->Item['name']; ?>?
+                        </strong>
+                    </div>
+                    <div class="col-md-6 text-right">
+                    <a class="btn btn-sm btn-success" href="#" onclick="OnSubmitForm('<?php echo $linkRestore ?>')" ><i class="fas fa-plus-circle"></i>Lưu</a>
+                        <a class="btn btn-sm btn-danger" href="<?php echo $linkBack ?>"><i class="fas fa-trash"></i>Thoát</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</form>

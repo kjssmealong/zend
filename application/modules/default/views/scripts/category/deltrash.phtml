@@ -1,0 +1,25 @@
+<?php
+$row = $this->Item;
+$linkBack = $this->baseUrl($this->currentController . '/trash');
+$linkDelete = $this->baseUrl($this->currentController . '/deltrash/id/' . $row['id']);
+?>
+<form name="appForm" action="" method="post" enctype="multipart/form-data">
+    <div class="content-wrapper my-2">
+        <div class="card">
+            <div class="card-header">
+                <div class="row">
+                    <div class="col-md-6">
+                        <strong class='text-danger'>
+                            BẠN CÓ MUỐN XÓA SẢN PHẨM : <?php echo $this->Item['name']; ?>?
+                        </strong>
+                    </div>
+                    <div class="col-md-6 text-right">
+                        <a class="btn btn-sm btn-danger" href="#" onclick="OnSubmitForm('<?php echo $linkDelete ?>')"><i class="fas fa-trash"></i>Xoa</a>
+                        <a class="btn btn-sm btn-success" href="<?php echo $linkBack ?>"><i class="fas fa-reply"></i>Thoát</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</form>
