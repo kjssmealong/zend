@@ -1,5 +1,5 @@
 <?php
-class Default_Model_Index extends Zend_Db_Table
+class Default_Model_Index extends Zend_Db_Table_Abstract
 {
 
     public function getUser()
