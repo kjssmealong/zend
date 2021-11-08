@@ -32,7 +32,7 @@ $linkDelete = $this->baseUrl($this->currentController . '/delete/id');
                 <tbody>
                     <?php foreach ($this->Items as $key => $val) : ?>
                         <tr>
-                            <td class="text-center"><img width="200px" height="200px" src="<?php echo $this->imgUrl . '/' . $val['img']; ?>" alt=""></td>
+                            <td class="text-center"><img width="200px" height="200px" src="<?php echo $this->adminImgUrl . '/' . $val['img']; ?>" alt=""></td>
                             <td><?php echo $val['name']; ?></td>
                             <td class="text-center" style="padding-top: 35px">
                                 <?php if ($val['status'] == 1) {

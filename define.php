@@ -19,6 +19,8 @@ set_include_path(implode(PATH_SEPARATOR, array(
 //Đường dẫn đến thư mục public
 define('PUBLIC_BATH', realpath(dirname(__FILE__) . '/public'));
 
+define('FILE_PATH',PUBLIC_BATH . '/templates/user/system/images');
+
 //Đường dẫn đến thư mực template
 define('TEMPLATE_PATH', PUBLIC_BATH . '/templates');
 define('TEMPLATE_URL', '/public/templates');

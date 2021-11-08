@@ -71,7 +71,7 @@ foreach ($this->CatItems as $rowcat) {
                         </div>
                         <div class="form-group">
                             <label style="font-weight: bold;">Ảnh sản phẩm</label>
-                            <img width="340" height="300" src="../public/images/product/<?php echo $row['img'] ?>" alt="">
+                            <img width="340" height="300" src="<?php echo $this->adminImgUrl . '/' . $row['img']; ?>" alt="">
                             <input name="img" type="file" class="form-control" />
                         </div>
 

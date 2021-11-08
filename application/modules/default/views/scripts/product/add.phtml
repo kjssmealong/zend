@@ -3,10 +3,22 @@ $linkBack = $this->baseUrl($this->currentController . '/index');
 $linkSave = $this->baseUrl($this->currentController . '/add');
 
 $strcat = '';
+$row = $this->Item;
 foreach ($this->CatItems as $rowcat) {
-    $strcat .= "<option value='" . $rowcat['id'] . "'>" . $rowcat['name'] . "</option>";
+    if ($row['catid'] == $rowcat['id']) {
+        $strcat .= "<option selected value='" . $rowcat['id'] . "'>" . $rowcat['name'] . "</option>";
+    } else {
+        $strcat .= "<option value='" . $rowcat['id'] . "'>" . $rowcat['name'] . "</option>";
+    }
 }
+
 ?>
+<style>
+    #errors {
+        background-color: darkorange;
+        border: 1px solid;
+    }
+</style>
 <form name="appForm" action="" method="post" enctype="multipart/form-data">
     <div class="content-wrapper my-2">
         <div class="card">
@@ -18,29 +30,36 @@ foreach ($this->CatItems as $rowcat) {
                         </strong>
                     </div>
                     <div class="col-md-6 text-right">
-                        <a class="btn btn-sm btn-success" href="#" onclick="OnSubmitForm('<?php echo $linkSave ?>')" ><i class="fas fa-plus-circle"></i>Lưu[Thêm]</a>
+                        <a class="btn btn-sm btn-success" href="#" onclick="OnSubmitForm('<?php echo $linkSave ?>')"><i class="fas fa-plus-circle"></i>Lưu[Thêm]</a>
                         <a class="btn btn-sm btn-danger" href="<?php echo $linkBack ?>"><i class="fas fa-trash"></i>Thoát</a>
                     </div>
                 </div>
             </div>
+            <b><?php
+                if ($this->messagesError != null) {
+                    $errors = $this->formErrors($this->messagesError, array('id' => 'errors'));
+                    echo $errors;
+                }
+                ?>
+            </b>
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-8">
                         <div class="form-group">
                             <label style="font-weight: bold;">Tên sản phẩm</label>
-                            <input name="name" type="text" class="form-control" placeholder="tên sản phẩm" required />
+                            <input name="name" type="text" class="form-control" placeholder="tên sản phẩm" value="<?php echo $row['name'] ?>" required />
                         </div>
                         <div class="form-group">
                             <label style="font-weight:bold;">Chi tiết sản phẩm</label>
-                            <textarea name="detail" class="form-control" placeholder="Chi tiết sản phẩm" required></textarea>
+                            <textarea name="detail" class="form-control" placeholder="Chi tiết sản phẩm" required><?php echo $row['detail'] ?></textarea>
                         </div>
                         <div class="form-group">
                             <label style="font-weight:bold;">Mô tả(SEO)</label>
-                            <textarea name="metadesc" class="form-control" placeholder="Mô tả: 155kt" required></textarea>
+                            <textarea name="metadesc" class="form-control" placeholder="Mô tả: 155kt" required><?php echo $row['metadesc'] ?></textarea>
                         </div>
                         <div class="form-group">
                             <label style="font-weight:bold;">Từ khóa(SEO)</label>
-                            <textarea name="metakey" class="form-control" placeholder="Từ khóa,  khóa từ, từ từ" required></textarea>
+                            <textarea name="metakey" class="form-control" placeholder="Từ khóa,  khóa từ, từ từ" required><?php echo $row['metakey'] ?></textarea>
                         </div>
                     </div>
                     <div class="col-md-4">
@@ -53,15 +72,15 @@ foreach ($this->CatItems as $rowcat) {
                         </div>
                         <div class="form-group">
                             <label style="font-weight: bold;">Số lượng</label>
-                            <input name="number" type="number" class="form-control" value="1" min="1" />
+                            <input name="number" type="number" class="form-control" value="<?php echo $row['number'] ?>" min="1" />
                         </div>
                         <div class="form-group">
                             <label style="font-weight: bold;">Giá</label>
-                            <input name="price" type="number" class="form-control" value="10000" min="10000" step="10000" />
+                            <input name="price" type="number" class="form-control" value="<?php echo $row['price'] ?>" min="10000" step="10000" />
                         </div>
                         <div class="form-group">
                             <label style="font-weight: bold;">Giá khuyến mãi</label>
-                            <input name="pricesale" type="number" class="form-control" value="10000" min="10000" step="10000" />
+                            <input name="pricesale" type="number" class="form-control" value="<?php echo $row['pricesale'] ?>" min="10000" step="10000" />
                         </div>
                         <div class="form-group">
                             <label style="font-weight: bold;">Ảnh đại diện</label>
@@ -70,8 +89,8 @@ foreach ($this->CatItems as $rowcat) {
                         <div class="form-group">
                             <label style="font-weight: bold;">Trạng thái</label>
                             <select name="status" class="form-control">
-                                <option value="1">Xuất bản</option>
-                                <option value="0">Chưa xuất bản</option>
+                                <option value="1" <?php echo ($row['status'] == 1) ? 'selected' : ''; ?>>Xuất bản</option>
+                                <option value="0" <?php echo ($row['status'] == 0) ? 'selected' : ''; ?>>Chưa xuất bản</option>
                             </select>
                         </div>
                     </div>

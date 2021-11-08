@@ -34,7 +34,7 @@ class Default_Model_Product extends Zend_Db_Table
       $row->number = $arrParam['number'];
       $row->price = $arrParam['price'];
       $row->pricesale = $arrParam['pricesale'];
-      // $row->img = $arrParam['img'];
+      $row->img = $arrParam['img'];
       $row->status = $arrParam['status'];
 
       $row->save();

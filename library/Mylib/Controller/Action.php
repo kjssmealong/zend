@@ -21,6 +21,8 @@ class Mylib_Controller_Action extends Zend_Controller_Action
         $cssUrl = $templateUrl . $config['dirCss'];
         $jsUrl = $templateUrl . $config['dirJs'];
         $imgUrl = $templateUrl . $config['dirImg'];
+
+        $adminImgUrl = $baseUrl . $config['dirImg'];
         //nạp title
         $this->view->headTitle($config['title']);
         //nạp meta
@@ -54,6 +56,7 @@ class Mylib_Controller_Action extends Zend_Controller_Action
         $this->view->cssUrl = $cssUrl;
         $this->view->jsUrl = $jsUrl;
         $this->view->imgUrl = $imgUrl;
+        $this->view->adminImgUrl = $adminImgUrl;
         $option = array('layoutPath' => $template_path, 'layout' => $config['layout']);
         Zend_Layout::startMvc($option);
     }
