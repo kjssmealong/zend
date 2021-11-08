@@ -3,6 +3,8 @@ $row = $this->Item;
 $linkBack = $this->baseUrl($this->currentController . '/index');
 $linkEdit = $this->baseUrl($this->currentController . '/edit/id/' . $row['id']);
 
+$current_product_img = $this->formHidden('current_product_img', $row['img']);
+
 $strcat = '';
 
 foreach ($this->CatItems as $rowcat) {
@@ -72,6 +74,7 @@ foreach ($this->CatItems as $rowcat) {
                         <div class="form-group">
                             <label style="font-weight: bold;">Ảnh sản phẩm</label>
                             <img width="340" height="300" src="<?php echo $this->adminImgUrl . '/' . $row['img']; ?>" alt="">
+                            <?php echo $current_product_img;?>
                             <input name="img" type="file" class="form-control" />
                         </div>
 

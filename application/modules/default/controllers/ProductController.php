@@ -81,9 +81,19 @@ class ProductController extends Mylib_Controller_Action
         $this->view->Item = $tblProduct->editIem($this->_arrParam, array('task' => 'product-edit'));
 
         if ($this->_request->isPost()) {
-            $tblProduct = new Default_Model_Product();
-            $tblProduct->saveItem($this->_arrParam, array('task' => 'product-edit'));
-            $this->_redirect($this->_actionMain);
+            $validator = new Default_Form_ValidateProduct($this->_arrParam);
+            if($validator->isError() == true){
+                $this->view->messagesError = $validator->getMessagesError();
+                $this->view->Item = $validator->getData();
+
+            }else
+            {
+                $tblProduct = new Default_Model_Product();
+                $arrParam = $validator->getData(array('upload' => true));
+                $tblProduct->saveItem($arrParam, array('task' => 'product-edit'));
+                $this->_redirect($this->_actionMain);
+            }
+
         }
     }
 

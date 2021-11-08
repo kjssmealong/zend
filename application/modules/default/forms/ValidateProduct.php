@@ -8,7 +8,9 @@ class Default_Form_ValidateProduct{
     protected $_arrData;
 
     public function __construct($arrParam = array(), $option = null){
+
         //kiểm tra name
+
         $validator = new Zend_Validate();
         $validator->addValidator(new Zend_Validate_NotEmpty(), true)->addValidator(new Zend_Validate_StringLength(3,32), true);
 
@@ -72,7 +74,6 @@ class Default_Form_ValidateProduct{
 
     //Trả về mảng dữ liệu sau khi validate
     public function getData($option = null){
-        $this->_arrData['img'] = '';
         if($option['upload'] == true){
             $this->_arrData['img'] =  $this->uploadFile();
         }
@@ -86,6 +87,14 @@ class Default_Form_ValidateProduct{
         $fileName = $fileInfo['img']['name'];
         if(!empty($fileName)){
         $fileName = $upload->upload('img', $upload_dir, array('task' => 'rename'), 'product_');
+        if($this->_arrData['action'] == 'edit'){
+            $upload->removeFile($upload_dir . '/' . $this->_arrData['current_product_img']);
+            print_r($upload_dir . '/' . $this->_arrData['current_product_img']);
+        }
+        }else{
+            if($this->_arrData['action'] == 'edit'){
+                $fileName = $this->_arrData['current_product_img'];
+            }
         }
         return $fileName;
     }

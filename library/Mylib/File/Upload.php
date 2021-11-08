@@ -24,4 +24,7 @@ class Mylib_File_Upload extends Zend_File_Transfer{
 
         return $newFileName;
     }
+    public function removeFile($fileName){
+        @unlink($fileName);
+    }
 }
