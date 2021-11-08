@@ -1,5 +1,5 @@
 <?php
-class Default_Model_Category extends Zend_Db_Table
+class Admin_Model_Category extends Zend_Db_Table
 {
 
   protected $_name = 'category';

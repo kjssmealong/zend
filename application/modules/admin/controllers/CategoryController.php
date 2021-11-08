@@ -1,5 +1,5 @@
 <?php
-class CategoryController extends Mylib_Controller_Action{
+class Admin_CategoryController extends Mylib_Controller_Action{
 
     //Mảng tham số nhận được ở mỗi action;
     protected $_arrParam;
@@ -13,6 +13,8 @@ class CategoryController extends Mylib_Controller_Action{
 
 
     public function init(){
+        $auth = new Admin_Form_CheckAuth();
+        $auth->auth();
         //Mảng tham số nhận được ở mỗi action
         $this->_arrParam = $this->_request->getParams();
         //Đường dẫn controller
@@ -29,18 +31,18 @@ class CategoryController extends Mylib_Controller_Action{
     }
 
     public function indexAction(){
-        $tblCategory = new Default_Model_category();
+        $tblCategory = new Admin_Model_Category();
         $this->view->Items = $tblCategory->getListItem(null , array('task'=>'category-list'));
     }
 
     public function trashAction(){
-        $tblCategory = new Default_Model_category();
+        $tblCategory = new Admin_Model_Category();
         $this->view->Items = $tblCategory->getListTrash(null , array('task'=>'category-trash'));
     }
 
     public function addAction(){
         if($this->_request->isPost()){
-            $tblCategory = new Default_Model_category();
+            $tblCategory = new Admin_Model_Category();
             $tblCategory->saveItem($this->_arrParam, array('task'=>'category-add'));
 
             $this->_redirect($this->_actionMain);
@@ -48,33 +50,33 @@ class CategoryController extends Mylib_Controller_Action{
     }
 
     public function editAction(){
-        $tblCategory = new Default_Model_category();
+        $tblCategory = new Admin_Model_Category();
         $this->view->Item = $tblCategory->editIem($this->_arrParam , array('task'=>'category-edit'));
 
         if($this->_request->isPost()){
-            $tblCategory = new Default_Model_category();
+            $tblCategory = new Admin_Model_Category();
             $tblCategory->saveItem($this->_arrParam, array('task'=>'category-edit'));
             $this->_redirect($this->_actionMain);
         }
     }
 
     public function deleteAction(){
-        $tblCategory = new Default_Model_category();
+        $tblCategory = new Admin_Model_Category();
         $this->view->Item = $tblCategory->editIem($this->_arrParam , array('task'=>'category-delete'));
 
         if($this->_request->isPost()){
-            $tblCategory = new Default_Model_category();
+            $tblCategory = new Admin_Model_Category();
             $tblCategory->saveItem($this->_arrParam, array('task'=>'category-delete'));
             $this->_redirect($this->_actionMain);
         }
     }
 
     public function restoreAction(){
-        $tblCategory = new Default_Model_category();
+        $tblCategory = new Admin_Model_Category();
         $this->view->Item = $tblCategory->editIem($this->_arrParam , array('task'=>'category-restore'));
 
         if($this->_request->isPost()){
-            $tblCategory = new Default_Model_category();
+            $tblCategory = new Admin_Model_Category();
             $tblCategory->saveItem($this->_arrParam, array('task'=>'category-restore'));
             $this->_redirect($this->_actionMain);
 
@@ -82,11 +84,11 @@ class CategoryController extends Mylib_Controller_Action{
     }
 
     public function deltrashAction(){
-        $tblCategory = new Default_Model_category();
+        $tblCategory = new Admin_Model_Category();
         $this->view->Item = $tblCategory->editIem($this->_arrParam , array('task'=>'category-deltrash'));
 
         if($this->_request->isPost()){
-            $tblCategory = new Default_Model_category();
+            $tblCategory = new Admin_Model_Category();
             $tblCategory->deleteItem($this->_arrParam, array('task'=>'category-deltrash'));
             $this->_redirect($this->_currentController . '/trash');
         }

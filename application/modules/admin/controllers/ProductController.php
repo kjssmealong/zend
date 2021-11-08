@@ -1,5 +1,5 @@
 <?php
-class ProductController extends Mylib_Controller_Action
+class Admin_ProductController extends Mylib_Controller_Action
 {
 
     //Mảng tham số nhận được ở mỗi action;
@@ -15,6 +15,8 @@ class ProductController extends Mylib_Controller_Action
 
     public function init()
     {
+        $auth = new Admin_Form_CheckAuth();
+        $auth->auth();
         //Mảng tham số nhận được ở mỗi action
         $this->_arrParam = $this->_request->getParams();
         //Đường dẫn controller
@@ -32,19 +34,19 @@ class ProductController extends Mylib_Controller_Action
 
     public function indexAction()
     {
-        $tblProduct = new Default_Model_Product();
+        $tblProduct = new Admin_Model_Product();
         $this->view->Items = $tblProduct->getListItem(null, array('task' => 'product-list'));
     }
 
     public function trashAction()
     {
-        $tblProduct = new Default_Model_Product();
+        $tblProduct = new Admin_Model_Product();
         $this->view->Items = $tblProduct->getListTrash(null, array('task' => 'product-trash'));
     }
 
     public function addAction()
     {
-        $tblCat = new Default_Model_Category();
+        $tblCat = new Admin_Model_Category();
         $this->view->CatItems = $tblCat->getListItem(null, array('task' => 'category-list'));
 
         if ($this->_request->isPost()) {
@@ -55,7 +57,7 @@ class ProductController extends Mylib_Controller_Action
 
             }else
             {
-                $tblProduct = new Default_Model_Product();
+                $tblProduct = new Admin_Model_Product();
                 $arrParam = $validator->getData(array('upload' => true));
                 $tblProduct->saveItem($arrParam, array('task' => 'product-add'));
                 $this->_redirect($this->_actionMain);
@@ -74,10 +76,10 @@ class ProductController extends Mylib_Controller_Action
 
     public function editAction()
     {
-        $tblCat = new Default_Model_Category();
+        $tblCat = new Admin_Model_Product();
         $this->view->CatItems = $tblCat->getListItem(null, array('task' => 'category-list'));
 
-        $tblProduct = new Default_Model_Product();
+        $tblProduct = new Admin_Model_Product();
         $this->view->Item = $tblProduct->editIem($this->_arrParam, array('task' => 'product-edit'));
 
         if ($this->_request->isPost()) {
@@ -88,7 +90,7 @@ class ProductController extends Mylib_Controller_Action
 
             }else
             {
-                $tblProduct = new Default_Model_Product();
+                $tblProduct = new Admin_Model_Product();
                 $arrParam = $validator->getData(array('upload' => true));
                 $tblProduct->saveItem($arrParam, array('task' => 'product-edit'));
                 $this->_redirect($this->_actionMain);
@@ -99,11 +101,11 @@ class ProductController extends Mylib_Controller_Action
 
     public function deleteAction()
     {
-        $tblProduct = new Default_Model_Product();
+        $tblProduct = new Admin_Model_Product();
         $this->view->Item = $tblProduct->editIem($this->_arrParam, array('task' => 'product-delete'));
 
         if ($this->_request->isPost()) {
-            $tblProduct = new Default_Model_Product();
+            $tblProduct = new Admin_Model_Product();
             $tblProduct->saveItem($this->_arrParam, array('task' => 'product-delete'));
             $this->_redirect($this->_actionMain);
         }
@@ -111,11 +113,11 @@ class ProductController extends Mylib_Controller_Action
 
     public function restoreAction()
     {
-        $tblProduct = new Default_Model_Product();
+        $tblProduct = new Admin_Model_Product();
         $this->view->Item = $tblProduct->editIem($this->_arrParam, array('task' => 'product-restore'));
 
         if ($this->_request->isPost()) {
-            $tblProduct = new Default_Model_Product();
+            $tblProduct = new Admin_Model_Product();
             $tblProduct->saveItem($this->_arrParam, array('task' => 'product-restore'));
             $this->_redirect($this->_actionMain);
         }
@@ -123,11 +125,11 @@ class ProductController extends Mylib_Controller_Action
 
     public function deltrashAction()
     {
-        $tblProduct = new Default_Model_Product();
+        $tblProduct = new Admin_Model_Product();
         $this->view->Item = $tblProduct->editIem($this->_arrParam, array('task' => 'product-deltrash'));
 
         if ($this->_request->isPost()) {
-            $tblProduct = new Default_Model_Product();
+            $tblProduct = new Admin_Model_Product();
             $tblProduct->deleteItem($this->_arrParam, array('task' => 'product-deltrash'));
             $this->_redirect($this->_currentController . '/trash');
         }

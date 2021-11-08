@@ -1,6 +1,6 @@
 <?php
 
-class User_IndexController extends Mylib_Controller_Action
+class IndexController extends Mylib_Controller_Action
 {
 
     public function init()

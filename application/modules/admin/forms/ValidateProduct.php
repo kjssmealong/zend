@@ -1,5 +1,5 @@
 <?php 
-class Default_Form_ValidateProduct{
+class Admin_Form_ValidateProduct{
 
     //Thuộc tính chứa thông báo lỗi
     protected $_messagesError = null;

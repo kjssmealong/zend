@@ -3,6 +3,9 @@ $linkAdd = $this->baseUrl($this->currentController . '/add');
 $linkTrash = $this->baseUrl($this->currentController . '/trash');
 $linkEdit = $this->baseUrl($this->currentController . '/edit/id');
 $linkDelete = $this->baseUrl($this->currentController . '/delete/id');
+
+$linkRestore = $this->baseUrl($this->currentController . '/Restore/id/');
+$linkDel = $this->baseUrl($this->currentController . '/Delete/id/');
 ?>
 <div class="content-wrapper my-2">
     <div class="card">
@@ -37,7 +40,7 @@ $linkDelete = $this->baseUrl($this->currentController . '/delete/id');
                             <td class="text-center" style="padding-top: 35px">
                                 <?php if ($val['status'] == 1) {
                                 ?>
-                                    <a class="btn btn-sm btn-success" href="#"><i class="fas fa-toggle-on"></i></a>
+                                    <a class="btn btn-sm btn-success"  href="#"><i class="fas fa-toggle-on"></i></a>
                                 <?php
                                 } else { ?>
 

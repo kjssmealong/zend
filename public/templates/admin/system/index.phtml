@@ -41,7 +41,7 @@
     <!-- Main Sidebar Container -->
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
       <!-- Brand Logo -->
-      <a href="<?php echo $this->baseUrl('default/admin/index') ?>" class="brand-link">
+      <a href="<?php echo $this->baseUrl('admin') ?>" class="brand-link">
         <img src="<?php echo $this->adminImgUrl; ?>/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light"><strong>HỆ THỐNG</strong></span>
       </a>
@@ -63,130 +63,147 @@
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-tachometer-alt"></i>
-                <p>
-                  Sản Phẩm
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="<?php echo $this->baseUrl('default/product/index') ?>" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Danh sách sản phẩm</p>
+<!--            <li class="nav-item has-treeview">-->
+<!--              <a href="#" class="nav-link">-->
+<!--                <i class="nav-icon fas fa-tachometer-alt"></i>-->
+<!--                <p>-->
+<!--                  Sản Phẩm-->
+<!--                  <i class="right fas fa-angle-left"></i>-->
+<!--                </p>-->
+<!--              </a>-->
+<!--              <ul class="nav nav-treeview">-->
+<!--                <li class="nav-item">-->
+<!--                  <a href="--><?php //echo $this->baseUrl('admin/product/') ?><!--" class="nav-link">-->
+<!--                    <i class="far fa-circle nav-icon"></i>-->
+<!--                    <p>Danh sách sản phẩm</p>-->
+<!---->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                  <a href="--><?php //echo $this->baseUrl('admin/category/') ?><!--" class="nav-link">-->
+<!--                    <i class="far fa-circle nav-icon"></i>-->
+<!--                    <p>Loại sản phẩm</p>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </li>-->
+
+
+              <li class="nav-item">
+                  <a href="<?php echo $this->baseUrl('admin/product/') ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Danh sách sản phẩm</p>
 
                   </a>
-                </li>
-                <li class="nav-item">
-                  <a href="index.php?option=category" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Loại sản phẩm</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-copy" style="width:20px;"></i>
-                <p>
-                  Bài viết
-                  <i class="right fas fa-angle-left"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview ">
-                <li class="nav-item">
-                  <a href="index.php?option=post" class="nav-link">
-                    <i class="nav-icon far fa-circle text-danger"></i>
-                    <p>Danh sách bài viết</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="index.php?option=topic" class="nav-link">
-                    <i class="nav-icon far fa-circle text-danger"></i>
-                    <p>Chủ đề bài viết</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="index.php?option=page" class="nav-link">
-                    <i class="nav-icon far fa-circle text-danger"></i>
-                    <p>Trang đơn</p>
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a href="index.php?option=order" class="nav-link">
-                <i class="nav-icon far fa-circle text-info"></i>
-                <p>Đơn hàng</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="index.php?option=customer" class="nav-link">
-                <i class="nav-icon far fa-circle text-success"></i>
-                <p>Khách hàng</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="index.php?option=contact" class="nav-link">
-                <i class="nav-icon far fa-circle text-danger"></i>
-                <p>Liên Hệ</p>
-              </a>
-            </li>
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-chart-pie"></i>
-                <p>
-                  Giao diện
-                  <i class="fas fa-angle-left right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="index.php?option=menu" class="nav-link">
-                    <i class="nav-icon far fa-circle text-danger"></i>
-                    <p>Menu</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="index.php?option=slider" class="nav-link">
-                    <i class="nav-icon far fa-circle text-danger"></i>
-                    <p>slider</p>
-                  </a>
-                </li>
+              </li>
 
-              </ul>
-            </li>
-            <li class="nav-item has-treeview">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-chart-pie"></i>
-                <p>
-                  Hệ thống
-                  <i class="fas fa-angle-left right"></i>
-                </p>
-              </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="index.php?option=user" class="nav-link">
-                    <i class="nav-icon far fa-circle text-danger"></i>
-                    <p>Thành viên</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="index.php?option=user_insert" class="nav-link">
-                    <i class="nav-icon far fa-circle text-danger"></i>
-                    <p>Thêm thành viên</p>
-                  </a>
-                </li>
+              <li class="nav-item">
+                  <a href="<?php echo $this->baseUrl('admin/category/') ?>" class="nav-link">
+                      <i class="far fa-circle nav-icon"></i>
+                      <p>Loại sản phẩm</p>
 
-              </ul>
-            </li>
+                  </a>
+              </li>
+<!--            <li class="nav-item has-treeview">-->
+<!--              <a href="#" class="nav-link">-->
+<!--                <i class="nav-icon fas fa-copy" style="width:20px;"></i>-->
+<!--                <p>-->
+<!--                  Bài viết-->
+<!--                  <i class="right fas fa-angle-left"></i>-->
+<!--                </p>-->
+<!--              </a>-->
+<!--              <ul class="nav nav-treeview ">-->
+<!--                <li class="nav-item">-->
+<!--                  <a href="index.php?option=post" class="nav-link">-->
+<!--                    <i class="nav-icon far fa-circle text-danger"></i>-->
+<!--                    <p>Danh sách bài viết</p>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                  <a href="index.php?option=topic" class="nav-link">-->
+<!--                    <i class="nav-icon far fa-circle text-danger"></i>-->
+<!--                    <p>Chủ đề bài viết</p>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                  <a href="index.php?option=page" class="nav-link">-->
+<!--                    <i class="nav-icon far fa-circle text-danger"></i>-->
+<!--                    <p>Trang đơn</p>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--              </ul>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a href="index.php?option=order" class="nav-link">-->
+<!--                <i class="nav-icon far fa-circle text-info"></i>-->
+<!--                <p>Đơn hàng</p>-->
+<!--              </a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a href="index.php?option=customer" class="nav-link">-->
+<!--                <i class="nav-icon far fa-circle text-success"></i>-->
+<!--                <p>Khách hàng</p>-->
+<!--              </a>-->
+<!--            </li>-->
+<!--            <li class="nav-item">-->
+<!--              <a href="index.php?option=contact" class="nav-link">-->
+<!--                <i class="nav-icon far fa-circle text-danger"></i>-->
+<!--                <p>Liên Hệ</p>-->
+<!--              </a>-->
+<!--            </li>-->
+<!--            <li class="nav-item has-treeview">-->
+<!--              <a href="#" class="nav-link">-->
+<!--                <i class="nav-icon fas fa-chart-pie"></i>-->
+<!--                <p>-->
+<!--                  Giao diện-->
+<!--                  <i class="fas fa-angle-left right"></i>-->
+<!--                </p>-->
+<!--              </a>-->
+<!--              <ul class="nav nav-treeview">-->
+<!--                <li class="nav-item">-->
+<!--                  <a href="index.php?option=menu" class="nav-link">-->
+<!--                    <i class="nav-icon far fa-circle text-danger"></i>-->
+<!--                    <p>Menu</p>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                  <a href="index.php?option=slider" class="nav-link">-->
+<!--                    <i class="nav-icon far fa-circle text-danger"></i>-->
+<!--                    <p>slider</p>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!---->
+<!--              </ul>-->
+<!--            </li>-->
+<!--            <li class="nav-item has-treeview">-->
+<!--              <a href="#" class="nav-link">-->
+<!--                <i class="nav-icon fas fa-chart-pie"></i>-->
+<!--                <p>-->
+<!--                  Hệ thống-->
+<!--                  <i class="fas fa-angle-left right"></i>-->
+<!--                </p>-->
+<!--              </a>-->
+<!--              <ul class="nav nav-treeview">-->
+<!--                <li class="nav-item">-->
+<!--                  <a href="index.php?option=user" class="nav-link">-->
+<!--                    <i class="nav-icon far fa-circle text-danger"></i>-->
+<!--                    <p>Thành viên</p>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!--                <li class="nav-item">-->
+<!--                  <a href="index.php?option=user_insert" class="nav-link">-->
+<!--                    <i class="nav-icon far fa-circle text-danger"></i>-->
+<!--                    <p>Thêm thành viên</p>-->
+<!--                  </a>-->
+<!--                </li>-->
+<!---->
+<!--              </ul>-->
+<!--            </li>-->
 
 
             <li class="nav-header">THÔNG TIN</li>
             <li class="nav-item">
-              <a href="logout.php" class="nav-link">
+              <a href="<?php echo $this->baseUrl('login/index/logout') ?>" class="nav-link">
                 <i class="nav-icon far fa-circle text-danger"></i>
                 <p class="text">Đăng xuất</p>
               </a>

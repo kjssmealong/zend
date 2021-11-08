@@ -1,0 +1,37 @@
+<?php
+$linkLogin = $this->baseUrl($this->currentController);
+?>
+<html>
+<head>
+    <title>Trang đăng nhập</title>
+    <meta charset="utf-8">
+</head>
+<body>
+<form name="appForm" action="" method="post" >
+    <fieldset>
+        <legend>Đăng nhập</legend>
+        <table>
+            <tr>
+                <td>Username</td>
+                <td><input type="text" name="username" size="30"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td><input type="password" name="password" size="30"></td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center"> <a style="text-decoration: none; color: black; border: 1px solid; padding: 1px; background-color: cornflowerblue" href="#" onclick="OnSubmitForm('<?php echo $linkLogin ?>')">Đăng nhập</a></td>
+
+            </tr>
+        </table>
+    </fieldset>
+</form>
+</body>
+</html>
+<script>
+    function OnSubmitForm(url){
+        document.appForm.action = url;
+        document.appForm.submit();
+        return true;
+    }
+</script>

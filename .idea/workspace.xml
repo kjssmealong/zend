@@ -5,16 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd00a54a-8172-4126-86a7-dba68e335742" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/application/modules/admin/forms/CheckAuth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/modules/login/Bootstrap.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/modules/login/controllers/IndexController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/modules/login/models/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/modules/login/views/scripts/index/index.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/modules/login/views/scripts/index/login.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/modules/login/views/scripts/index/logout.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Mylib/Encode.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/library/Mylib/system/Auth.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/default/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/default/controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/default/forms/ValidateProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/default/forms/ValidateProduct.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/product/edit.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/default/views/scripts/product/edit.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/Bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/Bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/configs/application.ini" beforeDir="false" afterPath="$PROJECT_DIR$/application/configs/application.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/Bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/Bootstrap.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/controllers/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/controllers/CategoryController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/forms/ValidateProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/forms/ValidateProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/models/Category.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/models/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/admin/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/index/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/category/add.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/category/add.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/category/delete.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/category/delete.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/category/deltrash.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/category/deltrash.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/category/edit.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/category/edit.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/category/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/category/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/category/restore.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/category/restore.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/category/trash.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/category/trash.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/product/add.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/add.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/product/delete.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/delete.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/product/deltrash.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/deltrash.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/product/edit.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/edit.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/product/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/product/restore.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/restore.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/product/trash.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/trash.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/default/views/scripts/product/upload.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/upload.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/modules/user/controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/user/controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/user/views/scripts/index/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/user/views/scripts/index/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Mylib/File/Upload.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Mylib/File/Upload.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product_1636252283.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product_1636252326.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product_1636252370.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/templates/admin/system/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/admin/system/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/templates/user/system/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/user/system/index.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,6 +81,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/modules/login/views/scripts/logout" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -60,6 +89,14 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.file-colors" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\zend\application\modules\login\views\scripts\logout" />
+      <recent name="D:\xampp\htdocs\zend\application\modules\login\views\scripts\login" />
+      <recent name="D:\xampp\htdocs\zend\application\modules\login" />
+      <recent name="D:\xampp\htdocs\zend\application\modules\training" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
