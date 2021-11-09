@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.0
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 08, 2021 lúc 01:17 AM
--- Phiên bản máy phục vụ: 10.4.18-MariaDB
--- Phiên bản PHP: 7.3.27
+-- Thời gian đã tạo: Th10 09, 2021 lúc 08:32 AM
+-- Phiên bản máy phục vụ: 10.4.21-MariaDB
+-- Phiên bản PHP: 7.3.31
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -47,8 +47,9 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`id`, `name`, `slug`, `parentid`, `orders`, `metakey`, `metadesc`, `created_at`, `created_by`, `updated_at`, `updated_by`, `status`) VALUES
-(2, '2', 'ádasd', 0, 1, 'ádas', 'ádasd', '2021-11-06 18:22:44', 0, '2021-11-06 18:22:44', 0, 1),
-(3, 'a', '', 0, 0, '', '', '2021-11-06 21:09:59', 0, '2021-11-06 21:09:59', 0, 1);
+(1, 'Chairs', '', 0, 0, '', '', '2021-11-09 06:19:02', 0, '2021-11-09 07:10:42', 0, 1),
+(2, 'Tables', '', 0, 0, '', '', '2021-11-09 07:05:26', 0, '2021-11-09 07:05:26', 0, 1),
+(3, 'Light', '', 0, 0, '', '', '2021-11-09 07:06:53', 0, '2021-11-09 07:06:53', 0, 1);
 
 -- --------------------------------------------------------
 
@@ -204,7 +205,10 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `catid`, `name`, `slug`, `img`, `detail`, `number`, `price`, `pricesale`, `metakey`, `metadesc`, `created_at`, `created_by`, `updated_at`, `updated_by`, `status`) VALUES
-(10, 2, ' aaaa', '', 'product_1636252370.jpg', 'ádasd', 1, 20000, 20000, 'đâsdasd', 'ádasdas', '2021-11-07 02:32:50', 1, '2021-11-07 02:32:50', 1, 1);
+(1, 1, 'Modern Chair 1', '', 'product_1636438800.jpg', 'ádas', 1, 10, 5, 'ádasd', 'đâsd', '2021-11-09 06:20:00', 1, '2021-11-09 07:14:10', 1, 1),
+(2, 1, 'Modern Chair 2', '', 'product_1636438839.jpg', 'ádasd', 1, 10, 7, 'ádasd', 'ádasd', '2021-11-09 06:20:39', 1, '2021-11-09 06:24:42', 1, 1),
+(3, 2, 'Small Table', '', 'product_1636441603.jpg', 'ádasd', 1, 20, 15, 'ádasdads', 'asdadsasd', '2021-11-09 07:06:43', 1, '2021-11-09 07:06:43', 1, 1),
+(4, 3, 'Hanging Light', '', 'product_1636441684.jpg', 'ádasd', 1, 15, 12, 'ádasd', 'ádasd', '2021-11-09 07:08:04', 1, '2021-11-09 07:08:04', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -270,6 +274,14 @@ CREATE TABLE `user` (
   `updated_by` tinyint(3) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'Người sửa',
   `status` tinyint(3) UNSIGNED NOT NULL DEFAULT 2 COMMENT 'Trạng thái'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `user`
+--
+
+INSERT INTO `user` (`id`, `fullname`, `username`, `password`, `email`, `gender`, `phone`, `address`, `img`, `access`, `created_at`, `created_by`, `updated_at`, `updated_by`, `status`) VALUES
+(1, 'ád', 'admin', 'e10adc3949ba59abbe56e057f20f883e', '', 0, '', NULL, 'img-01.jpg\"', 1, '2021-11-08 06:32:14', 1, '2021-11-08 06:32:14', 1, 1),
+(2, 'Thắng', 'user', 'e10adc3949ba59abbe56e057f20f883e', '', 0, '', NULL, '', 0, '2021-11-08 06:32:14', 1, '2021-11-08 06:32:14', 1, 1);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -391,7 +403,7 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Mã sản phẩm', AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Mã sản phẩm', AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT cho bảng `slider`
@@ -409,7 +421,7 @@ ALTER TABLE `topic`
 -- AUTO_INCREMENT cho bảng `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Mã tài khoản';
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Mã tài khoản', AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

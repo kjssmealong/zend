@@ -11,6 +11,5 @@ class IndexController extends Mylib_Controller_Action
 
     public function indexAction()
     {
-        echo '<br' . __METHOD__;
     }
 }

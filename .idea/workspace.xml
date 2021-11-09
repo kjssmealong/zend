@@ -5,401 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1dee964-e08d-462c-b024-273a522c7fa2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/application/modules/user/controllers/ProductController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/modules/user/views/scripts/product/index.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/templates/user/system/html/footer.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/templates/user/system/html/header.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/deployment.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/modules/user/models/Category.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/modules/user/models/Product.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/modules/user/views/scripts/product/category.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/modules/user/views/scripts/product/detail.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/templates/user/system/img/product_1636438800.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/templates/user/system/img/product_1636438839.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/admin/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/admin/forms/CheckAuth.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/forms/CheckAuth.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/login/Bootstrap.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/account/Bootstrap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/login/controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/account/controllers/IndexController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/login/models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/account/models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/login/views/scripts/index/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/account/views/scripts/index/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/login/views/scripts/index/login.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/account/views/scripts/index/login.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/login/views/scripts/index/logout.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/account/views/scripts/index/logout.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/user/views/scripts/index/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/user/views/scripts/index/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/define.php" beforeDir="false" afterPath="$PROJECT_DIR$/define.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/Auth/Adapter/OpenId.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/Auth/Adapter/OpenId.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/Db/Adapter/Abstract.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/Db/Adapter/Abstract.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/Db/Adapter/Sqlsrv.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/Db/Adapter/Sqlsrv.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/Gdata/ClientLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/Gdata/ClientLogin.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/Gdata/Gapps/Extension/Login.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/Gdata/Gapps/Extension/Login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/Gdata/Gapps/NicknameEntry.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/Gdata/Gapps/NicknameEntry.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/Gdata/Gapps/UserEntry.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/Gdata/Gapps/UserEntry.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/Mail/Storage/Imap.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/Mail/Storage/Imap.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/OpenId/Consumer.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/OpenId/Consumer.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/OpenId/Provider.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/OpenId/Provider.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/Queue/Adapter/Activemq.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/Queue/Adapter/Activemq.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/Queue/Adapter/PlatformJobQueue.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/Queue/Adapter/PlatformJobQueue.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/Service/LiveDocx.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/Service/LiveDocx.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/Service/ShortUrl/BitLy.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/Service/ShortUrl/BitLy.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/Service/SqlAzure/Management/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/Service/SqlAzure/Management/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/Service/SqlAzure/Management/ServerInstance.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/Service/SqlAzure/Management/ServerInstance.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/Soap/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/Soap/Client.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/library/Zend/View/Helper/HeadLink.php" beforeDir="false" afterPath="$PROJECT_DIR$/library/Zend/View/Helper/HeadLink.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/admin/system/css/fontawesome-free-5.15.1-web/metadata/icons.yml" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/admin/system/css/fontawesome-free-5.15.1-web/metadata/icons.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/admin/system/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/admin/system/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/admin/system/js/adminlte.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/admin/system/js/adminlte.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/admin/system/js/adminlte.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/admin/system/js/adminlte.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/admin/system/template.ini" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/admin/system/template.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/ajax-loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/animate.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/user/system/css/animate.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/aos.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/apple-touch-icon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/bootstrap-datepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/user/system/css/bootstrap.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/bootstrap/bootstrap-grid.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/bootstrap/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/color-purple.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/color.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/css/bootstrap-reboot.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/css/mixins/_text-hide.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/flaticon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/font-awesome.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/user/system/css/font-awesome.min.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/icomoon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/ionicons.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/jquery-ui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/jquery.timepicker.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/magnific-popup.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/user/system/css/magnific-popup.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/main.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/normalize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/open-iconic-bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/owl.carousel.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/user/system/css/owl.carousel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/owl.carousel.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/owl.theme.default.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/responsive.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/user/system/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/css/transitions.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/flaticon/backup.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/flaticon/font/Flaticon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/flaticon/font/Flaticon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/flaticon/font/Flaticon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/flaticon/font/Flaticon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/flaticon/font/Flaticon.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/flaticon/font/_flaticon.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/flaticon/font/flaticon.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/flaticon/font/flaticon.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/flaticon/license/license.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/fontawesome-webfont3e6e.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/fontawesome-webfont3e6e.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/fontawesome-webfont3e6e.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/fontawesome-webfont3e6e.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/fontawesome-webfont3e6e.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/fontawesome-webfontd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/glyphicons-halflings-regulard41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/icomoon/icomoon.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/icomoon/icomoon.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/icomoon/icomoon.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/icomoon/icomoon.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/icomoonbd7d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/icomoonbd7d.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/icomoonbd7d.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/icomoonbd7d.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/ionicons/css/_ionicons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/ionicons/css/ionicons.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/ionicons/fonts/ionicons.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/ionicons/fonts/ionicons.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/ionicons/fonts/ionicons.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/ionicons/fonts/ionicons.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/ionicons/fonts/ionicons.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/open-iconic/open-iconic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/open-iconic/open-iconic.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/open-iconic/open-iconic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/open-iconic/open-iconic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/fonts/open-iconic/open-iconic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/AdminLTELogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/about.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/arrow-down.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-16.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-17.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-18.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-19.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-20.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-21.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-22.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-23.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-24.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-25.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/author/imag-26.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/avatar04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/avatar2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/avatar3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/avatar5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/bg_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/bg_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/bg_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/blog/img-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/blog/img-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/blog/img-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/blog/img-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/blog/img-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/blog/img-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/blog/img-07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/blog/img-08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/blog/img-09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/blog/img-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/blog/img-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/blog/img-12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/blog/img-13.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/blog/img-14.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/blog/img-15.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/books/bookpattren.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/books/img-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/books/img-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/books/img-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/books/img-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/books/img-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/books/img-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/books/img-07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/books/img-08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/books/img-09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/books/img-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/books/img-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/books/img-12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/category-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/category-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/category-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/category-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/category.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/comingsoon-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/flaticon/backup.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/flaticon/license/license.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/flaticon/svg/001-business-and-finance.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/flaticon/svg/002-open-24-hours.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/flaticon/svg/003-social-network.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/flaticon/svg/004-offer.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/flaticon/svg/005-discount.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/flaticon/svg/006-timer.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/flogo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/hero_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/image_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/image_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/image_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/image_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/image_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/image_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/img-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/img-01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/img-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/img-02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/img-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/img-03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/img-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/img-04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/img-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/img_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/img_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/img_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/img_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/instagram/img-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/instagram/img-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/instagram/img-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/instagram/img-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/instagram/img-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/instagram/img-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/instagram/img-07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/instagram/img-08.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/instagram/img-09.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/logo-02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/logo_footer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/owl.video.play.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/parallax/bgparallax-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/parallax/bgparallax-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/parallax/bgparallax-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/parallax/bgparallax-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/parallax/bgparallax-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/parallax/bgparallax-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/parallax/bgparallax-07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/partner-1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/partner-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/partner-3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/partner-4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/partner-5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/paymenticon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/person_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/person_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/person_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/person_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/placeholder.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/placeholdervtwo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product-1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product-10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product-11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product-12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product-3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product-4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product-5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product-6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product-7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product-8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product-9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product_1636342579.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product_2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product_3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product_4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product_5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product_6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product_7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/product_8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/products/img-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/products/img-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/products/img-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/products/img-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/products/img-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/products/img-06.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/products/img-07.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/team/img-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/team/img-02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/team/img-03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/team/img-04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/team/img-05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/ui-icons_444444_256x240.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/ui-icons_555555_256x240.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/ui-icons_777620_256x240.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/ui-icons_777777_256x240.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/ui-icons_cc0000_256x240.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/ui-icons_ffffff_256x240.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/images/users/img-01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/user/system/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/aos.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/appear.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/bootstrap-datepicker.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/user/system/js/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/countTo.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/countdown.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/gmap3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/google-map.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/jquery-3.2.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/jquery-migrate-3.0.1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/jquery-ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/jquery.animateNumber.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/jquery.easing.1.3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/jquery.magnific-popup.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/jquery.stellar.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/jquery.vide.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/jquery.waypoints.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/owl.carousel.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/parallax.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/popper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/user/system/js/popper.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/range.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/scrollax.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/vendor/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/vendor/jquery-library.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_breadcrumb.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_button-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_card.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_carousel.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_close.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_code.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_custom-forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_dropdown.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_functions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_images.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_input-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_jumbotron.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_list-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_media.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_mixins.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_modal.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_nav.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_navbar.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_popover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_print.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_progress.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_reboot.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_root.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_spinners.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_tables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_toasts.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_tooltip.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_transitions.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_type.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_utilities.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/_variables.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/bootstrap-grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/bootstrap-reboot.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/bootstrap.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_alert.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_background-variant.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_badge.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_border-radius.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_box-shadow.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_breakpoints.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_buttons.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_caret.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_clearfix.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_float.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_forms.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_gradients.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_grid-framework.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_grid.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_hover.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_image.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_list-group.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_lists.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_nav-divider.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_pagination.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_reset-text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_resize.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_screen-reader.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_size.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_table-row.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_text-emphasis.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_text-hide.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_text-truncate.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_transition.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/mixins/_visibility.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/utilities/_align.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/utilities/_background.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/utilities/_borders.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/utilities/_clearfix.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/utilities/_display.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/utilities/_embed.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/utilities/_flex.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/utilities/_float.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/utilities/_overflow.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/utilities/_position.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/utilities/_screenreaders.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/utilities/_shadows.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/utilities/_sizing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/utilities/_spacing.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/utilities/_text.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/bootstrap/utilities/_visibility.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/user/system/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/template.ini" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/user/system/template.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/user/controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/user/controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/user/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/user/controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/user/views/scripts/product/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/user/views/scripts/product/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/templates/user/system/html/header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/user/system/html/header.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -420,6 +37,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="PhpTemplates">
+    <option name="NEW_PHP_FILE_LAST_EXTENSION" value="phtml" />
+  </component>
   <component name="ProjectId" id="20fAxYbMh5mbAEF0bf45YkXmER2" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -434,12 +54,18 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/modules/user" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\zend\application\modules\user" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -450,7 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1636425518738</updated>
       <workItem from="1636425520987" duration="2285000" />
-      <workItem from="1636428553463" duration="5972000" />
+      <workItem from="1636428553463" duration="11268000" />
     </task>
     <servers />
   </component>
