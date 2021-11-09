@@ -293,7 +293,7 @@ abstract class Zend_Db_Adapter_Abstract
              * @see Zend_Db_Adapter_Exception
              */
             require_once 'Zend/Db/Adapter/Exception.php';
-            throw new Zend_Db_Adapter_Exception("Configuration array must have a key for 'password' for login credentials");
+            throw new Zend_Db_Adapter_Exception("Configuration array must have a key for 'password' for account credentials");
         }
 
         if (! array_key_exists('username', $config)) {
@@ -301,7 +301,7 @@ abstract class Zend_Db_Adapter_Abstract
              * @see Zend_Db_Adapter_Exception
              */
             require_once 'Zend/Db/Adapter/Exception.php';
-            throw new Zend_Db_Adapter_Exception("Configuration array must have a key for 'username' for login credentials");
+            throw new Zend_Db_Adapter_Exception("Configuration array must have a key for 'username' for account credentials");
         }
     }
 

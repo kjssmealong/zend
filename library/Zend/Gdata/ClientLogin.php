@@ -46,7 +46,7 @@ class Zend_Gdata_ClientLogin
 {
 
     /**
-     * The Google client login URI
+     * The Google client account URI
      *
      */
     const CLIENTLOGIN_URI = 'https://www.google.com/accounts/ClientLogin';

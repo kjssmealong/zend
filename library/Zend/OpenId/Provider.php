@@ -65,7 +65,7 @@ class Zend_OpenId_Provider
     private $_sessionTtl;
 
     /**
-     * URL to peform interactive user login
+     * URL to peform interactive user account
      *
      * @var string $_loginUrl
      */
@@ -88,9 +88,9 @@ class Zend_OpenId_Provider
     /**
      * Constructs a Zend_OpenId_Provider object with given parameters.
      *
-     * @param string $loginUrl is an URL that provides login screen for
+     * @param string $loginUrl is an URL that provides account screen for
      *  end-user (by default it is the same URL with additional GET variable
-     *  openid.action=login)
+     *  openid.action=account)
      * @param string $trustUrl is an URL that shows a question if end-user
      *  trust to given consumer (by default it is the same URL with additional
      *  GET variable openid.action=trust)
@@ -111,7 +111,7 @@ class Zend_OpenId_Provider
                                 $sessionTtl = 3600)
     {
         if ($loginUrl === null) {
-            $loginUrl = Zend_OpenId::selfUrl() . '?openid.action=login';
+            $loginUrl = Zend_OpenId::selfUrl() . '?openid.action=account';
         } else {
             $loginUrl = Zend_OpenId::absoluteUrl($loginUrl);
         }
@@ -179,7 +179,7 @@ class Zend_OpenId_Provider
     }
 
     /**
-     * Performs login of user with given $id and $password
+     * Performs account of user with given $id and $password
      * Returns true in case of success and false otherwise
      *
      * @param string $id user identity URL

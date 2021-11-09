@@ -32,7 +32,7 @@ require_once 'Zend/Gdata/Extension.php';
 require_once 'Zend/Gdata/Gapps.php';
 
 /**
- * Represents the apps:login element used by the Apps data API. This
+ * Represents the apps:account element used by the Apps data API. This
  * class is used to describe properties of a user, and is usually contained
  * within instances of Zene_Gdata_Gapps_UserEntry or any other class
  * which is linked to a particular username.
@@ -47,7 +47,7 @@ class Zend_Gdata_Gapps_Extension_Login extends Zend_Gdata_Extension
 {
 
     protected $_rootNamespace = 'apps';
-    protected $_rootElement = 'login';
+    protected $_rootElement = 'account';
 
     /**
      * The username for this user. This is used as the user's email address
@@ -102,7 +102,7 @@ class Zend_Gdata_Gapps_Extension_Login extends Zend_Gdata_Extension
 
     /**
      * True if the user will be required to change their password at
-     * their next login, false otherwise.
+     * their next account, false otherwise.
      *
      * @var boolean
      */
@@ -112,19 +112,19 @@ class Zend_Gdata_Gapps_Extension_Login extends Zend_Gdata_Extension
      * Constructs a new Zend_Gdata_Gapps_Extension_Login object.
      *
      * @param string $username (optional) The username to be used for this
-     *          login.
+     *          account.
      * @param string $password (optional) The password to be used for this
-     *          login.
+     *          account.
      * @param string $hashFunctionName (optional) The name of the hash
      *          function used to protect the password, or null if no
      *          has function has been applied. As of this writing,
      *          the only valid values are 'SHA-1' or null.
      * @param boolean $admin (optional) Whether the user is an administrator
      *          or not.
-     * @param boolean $suspended (optional) Whether this login is suspended or not.
+     * @param boolean $suspended (optional) Whether this account is suspended or not.
      * @param boolean $changePasswordAtNextLogin (optional) Whether
      *          the user is required to change their password at their
-     *          next login.
+     *          next account.
      * @param boolean $agreedToTerms (optional) Whether the user has
      *          agreed to the terms of service.
      */
@@ -210,7 +210,7 @@ class Zend_Gdata_Gapps_Extension_Login extends Zend_Gdata_Extension
             }
             else {
                 require_once('Zend/Gdata/App/InvalidArgumentException.php');
-                throw new Zend_Gdata_App_InvalidArgumentException("Expected 'true' or 'false' for apps:login#admin.");
+                throw new Zend_Gdata_App_InvalidArgumentException("Expected 'true' or 'false' for apps:account#admin.");
             }
             break;
         case 'agreedToTerms':
@@ -222,7 +222,7 @@ class Zend_Gdata_Gapps_Extension_Login extends Zend_Gdata_Extension
             }
             else {
                 require_once('Zend/Gdata/App/InvalidArgumentException.php');
-                throw new Zend_Gdata_App_InvalidArgumentException("Expected 'true' or 'false' for apps:login#agreedToTerms.");
+                throw new Zend_Gdata_App_InvalidArgumentException("Expected 'true' or 'false' for apps:account#agreedToTerms.");
             }
             break;
         case 'suspended':
@@ -234,7 +234,7 @@ class Zend_Gdata_Gapps_Extension_Login extends Zend_Gdata_Extension
             }
             else {
                 require_once('Zend/Gdata/App/InvalidArgumentException.php');
-                throw new Zend_Gdata_App_InvalidArgumentException("Expected 'true' or 'false' for apps:login#suspended.");
+                throw new Zend_Gdata_App_InvalidArgumentException("Expected 'true' or 'false' for apps:account#suspended.");
             }
             break;
         case 'changePasswordAtNextLogin':
@@ -246,7 +246,7 @@ class Zend_Gdata_Gapps_Extension_Login extends Zend_Gdata_Extension
             }
             else {
                 require_once('Zend/Gdata/App/InvalidArgumentException.php');
-                throw new Zend_Gdata_App_InvalidArgumentException("Expected 'true' or 'false' for apps:login#changePasswordAtNextLogin.");
+                throw new Zend_Gdata_App_InvalidArgumentException("Expected 'true' or 'false' for apps:account#changePasswordAtNextLogin.");
             }
             break;
         default:
@@ -418,7 +418,7 @@ class Zend_Gdata_Gapps_Extension_Login extends Zend_Gdata_Extension
 
     /**
      * Set the value for this element's suspended attribute. If true, the
-     * user will not be able to login to this domain until unsuspended.
+     * user will not be able to account to this domain until unsuspended.
      *
      * @param boolean $value The desired value for this attribute.
      * @return Zend_Gdata_Gapps_Extension_Login Provides a fluent interface.
@@ -453,7 +453,7 @@ class Zend_Gdata_Gapps_Extension_Login extends Zend_Gdata_Extension
     /**
      * Set the value for this element's changePasswordAtNextLogin attribute.
      * If true, the user will be forced to set a new password the next
-     * time they login.
+     * time they account.
      *
      * @param boolean $value The desired value for this attribute.
      * @return Zend_Gdata_Gapps_Extension_Login Provides a fluent interface.

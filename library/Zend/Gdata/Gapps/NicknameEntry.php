@@ -62,7 +62,7 @@ class Zend_Gdata_Gapps_NicknameEntry extends Zend_Gdata_Entry
     protected $_entryClassName = 'Zend_Gdata_Gapps_NicknameEntry';
 
     /**
-     * <apps:login> element used to hold information about the owner
+     * <apps:account> element used to hold information about the owner
      * of this nickname, including their username.
      *
      * @var Zend_Gdata_Gapps_Extension_Login
@@ -120,7 +120,7 @@ class Zend_Gdata_Gapps_NicknameEntry extends Zend_Gdata_Entry
         $absoluteNodeName = $child->namespaceURI . ':' . $child->localName;
 
         switch ($absoluteNodeName) {
-            case $this->lookupNamespace('apps') . ':' . 'login';
+            case $this->lookupNamespace('apps') . ':' . 'account';
                 $login = new Zend_Gdata_Gapps_Extension_Login();
                 $login->transferFromDOM($child);
                 $this->_login = $login;
@@ -137,7 +137,7 @@ class Zend_Gdata_Gapps_NicknameEntry extends Zend_Gdata_Entry
     }
 
     /**
-     * Get the value of the login property for this object.
+     * Get the value of the account property for this object.
      *
      * @see setLogin
      * @return Zend_Gdata_Gapps_Extension_Login The requested object.
@@ -148,11 +148,11 @@ class Zend_Gdata_Gapps_NicknameEntry extends Zend_Gdata_Entry
     }
 
     /**
-     * Set the value of the login property for this object. This property
+     * Set the value of the account property for this object. This property
      * is used to store the username address of the current user.
      *
      * @param Zend_Gdata_Gapps_Extension_Login $value The desired value for
-     *          this instance's login property.
+     *          this instance's account property.
      * @return Zend_Gdata_Gapps_NicknameEntry Provides a fluent interface.
      */
     public function setLogin($value)

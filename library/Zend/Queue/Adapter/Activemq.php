@@ -94,7 +94,7 @@ class Zend_Queue_Adapter_Activemq extends Zend_Queue_Adapter_AdapterAbstract
         // such as Apache's ActiveMQ
         $connect->setCommand('CONNECT');
         if (isset($options['username'])) {
-            $connect->setHeader('login', $options['username']);
+            $connect->setHeader('account', $options['username']);
             $connect->setHeader('passcode', $options['password']);
         }
 

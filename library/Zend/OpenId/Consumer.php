@@ -987,7 +987,7 @@ class Zend_OpenId_Consumer
     }
 
     /**
-     * Returns error message that explains failure of login, check or verify
+     * Returns error message that explains failure of account, check or verify
      *
      * @return string
      */

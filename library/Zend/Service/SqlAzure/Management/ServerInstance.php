@@ -34,7 +34,7 @@ require_once 'Zend/Service/SqlAzure/Management/ServiceEntityAbstract.php';
  * 
  * @property string $Name               The name of the server.
  * @property string $DnsName            The DNS name of the server.
- * @property string $AdministratorLogin The administrator login.
+ * @property string $AdministratorLogin The administrator account.
  * @property string $Location           The location of the server in Windows Azure.
  */
 class Zend_Service_SqlAzure_Management_ServerInstance
@@ -44,7 +44,7 @@ class Zend_Service_SqlAzure_Management_ServerInstance
      * Constructor
      * 
      * @param string $name               The name of the server.
-     * @param string $administratorLogin The administrator login.
+     * @param string $administratorLogin The administrator account.
      * @param string $location           The location of the server in Windows Azure.
 	 */
     public function __construct($name, $administratorLogin, $location) 

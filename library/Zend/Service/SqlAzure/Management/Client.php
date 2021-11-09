@@ -341,7 +341,7 @@ class Zend_Service_SqlAzure_Management_Client
 	/**
 	 * The Create Server operation adds a new SQL Azure server to a subscription.
 	 * 
-	 * @param string $administratorLogin Administrator login.
+	 * @param string $administratorLogin Administrator account.
 	 * @param string $administratorPassword Administrator password.
 	 * @param string $location Location of the server.
 	 * @return Zend_Service_SqlAzure_Management_ServerInstance Server information.
@@ -351,7 +351,7 @@ class Zend_Service_SqlAzure_Management_Client
 	{
 		if ($administratorLogin == '' || is_null($administratorLogin)) {
                     require_once 'Zend/Service/SqlAzure/Management/Exception.php';
-                    throw new Zend_Service_SqlAzure_Management_Exception('Administrator login should be specified.');
+                    throw new Zend_Service_SqlAzure_Management_Exception('Administrator account should be specified.');
                 }
 		if ($administratorPassword == '' || is_null($administratorPassword)) {
                     require_once 'Zend/Service/SqlAzure/Management/Exception.php';

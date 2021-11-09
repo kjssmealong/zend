@@ -228,7 +228,7 @@ class Zend_Soap_Client
                 case 'use':
                     $this->setEncodingMethod($value);
                     break;
-                case 'login':
+                case 'account':
                     $this->setHttpLogin($value);
                     break;
                 case 'password':
@@ -305,7 +305,7 @@ class Zend_Soap_Client
         $options['location']       = $this->getLocation();
         $options['style']          = $this->getStyle();
         $options['use']            = $this->getEncodingMethod();
-        $options['login']          = $this->getHttpLogin();
+        $options['account']          = $this->getHttpLogin();
         $options['password']       = $this->getHttpPassword();
         $options['proxy_host']     = $this->getProxyHost();
         $options['proxy_port']     = $this->getProxyPort();
@@ -574,7 +574,7 @@ class Zend_Soap_Client
     }
 
     /**
-     * Set HTTP login
+     * Set HTTP account
      *
      * @param  string $login
      * @return Zend_Soap_Client
@@ -674,7 +674,7 @@ class Zend_Soap_Client
     }
 
     /**
-     * Set proxy login
+     * Set proxy account
      *
      * @param  string $proxyLogin
      * @return Zend_Soap_Client
@@ -689,7 +689,7 @@ class Zend_Soap_Client
     }
 
     /**
-     * Retrieve proxy login
+     * Retrieve proxy account
      *
      * @return string
      */

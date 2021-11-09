@@ -50,7 +50,7 @@ class Admin_ProductController extends Mylib_Controller_Action
         $this->view->CatItems = $tblCat->getListItem(null, array('task' => 'category-list'));
 
         if ($this->_request->isPost()) {
-            $validator = new Default_Form_ValidateProduct($this->_arrParam);
+            $validator = new Admin_Form_ValidateProduct($this->_arrParam);
             if($validator->isError() == true){
                 $this->view->messagesError = $validator->getMessagesError();
                 $this->view->Item = $validator->getData();
@@ -76,14 +76,14 @@ class Admin_ProductController extends Mylib_Controller_Action
 
     public function editAction()
     {
-        $tblCat = new Admin_Model_Product();
+        $tblCat = new Admin_Model_Category();
         $this->view->CatItems = $tblCat->getListItem(null, array('task' => 'category-list'));
 
         $tblProduct = new Admin_Model_Product();
         $this->view->Item = $tblProduct->editIem($this->_arrParam, array('task' => 'product-edit'));
 
         if ($this->_request->isPost()) {
-            $validator = new Default_Form_ValidateProduct($this->_arrParam);
+            $validator = new Admin_Form_ValidateProduct($this->_arrParam);
             if($validator->isError() == true){
                 $this->view->messagesError = $validator->getMessagesError();
                 $this->view->Item = $validator->getData();

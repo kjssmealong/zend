@@ -190,7 +190,7 @@ class Zend_Db_Adapter_Sqlsrv extends Zend_Db_Adapter_Abstract
              * @see Zend_Db_Adapter_Exception
              */
             require_once 'Zend/Db/Adapter/Exception.php';
-            throw new Zend_Db_Adapter_Exception("Configuration array must have a key for 'password' for login credentials.
+            throw new Zend_Db_Adapter_Exception("Configuration array must have a key for 'password' for account credentials.
                                                 If Windows Authentication is desired, both keys 'username' and 'password' should be ommited from config.");
         }
 
@@ -199,7 +199,7 @@ class Zend_Db_Adapter_Sqlsrv extends Zend_Db_Adapter_Abstract
              * @see Zend_Db_Adapter_Exception
              */
             require_once 'Zend/Db/Adapter/Exception.php';
-            throw new Zend_Db_Adapter_Exception("Configuration array must have a key for 'username' for login credentials.
+            throw new Zend_Db_Adapter_Exception("Configuration array must have a key for 'username' for account credentials.
                                                 If Windows Authentication is desired, both keys 'username' and 'password' should be ommited from config.");
         }
     }

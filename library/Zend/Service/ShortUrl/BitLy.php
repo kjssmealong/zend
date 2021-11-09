@@ -43,7 +43,7 @@ class Zend_Service_ShortUrl_BitLy extends Zend_Service_ShortUrl_AbstractShortene
     protected $_apiUri = 'http://api.bitly.com';
 
     /**
-     * user login name
+     * user account name
      *
      * @var string
      */
@@ -57,7 +57,7 @@ class Zend_Service_ShortUrl_BitLy extends Zend_Service_ShortUrl_AbstractShortene
     protected $_apiKey;
 
     /**
-     * @param string $login user login name or application access token
+     * @param string $login user account name or application access token
      * @param null|string $apiKey user API key
      */
     public function __construct($login, $apiKey = null)
@@ -83,7 +83,7 @@ class Zend_Service_ShortUrl_BitLy extends Zend_Service_ShortUrl_AbstractShortene
     }
 
     /**
-     * set login credentials
+     * set account credentials
      *
      * @param $login
      * @param $apiKey
@@ -103,11 +103,11 @@ class Zend_Service_ShortUrl_BitLy extends Zend_Service_ShortUrl_AbstractShortene
     protected function _setAccessParameter()
     {
         if(null === $this->_loginName) {
-            //OAuth login
+            //OAuth account
             $this->getHttpClient()->setParameterGet('access_token', $this->_apiKey);
         } else {
-            //login/APIKey authentication
-            $this->getHttpClient()->setParameterGet('login',$this->_loginName);
+            //account/APIKey authentication
+            $this->getHttpClient()->setParameterGet('account',$this->_loginName);
             $this->getHttpClient()->setParameterGet('apiKey',$this->_apiKey);
         }
     }

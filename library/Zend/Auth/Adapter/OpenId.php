@@ -234,7 +234,7 @@ class Zend_Auth_Adapter_OpenId implements Zend_Auth_Adapter_Interface
         if (!empty($id)) {
             $consumer = new Zend_OpenId_Consumer($this->_storage);
             $consumer->setHttpClient($this->_httpClient);
-            /* login() is never returns on success */
+            /* account() is never returns on success */
             if (!$this->_check_immediate) {
                 if (!$consumer->login($id,
                         $this->_returnTo,

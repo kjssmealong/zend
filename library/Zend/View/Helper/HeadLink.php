@@ -401,16 +401,11 @@ class Zend_View_Helper_HeadLink extends Zend_View_Helper_Placeholder_Container_S
             $extras = (array) $extras;
         }
 
-        $attributes = compact('rel', 'type', 'href', 'media', 'conditionalStylesheet', 'extras');
+        $attributes = compact('rel', 'type', 'href', 'media', 'conditionalStylesheet');
         return $this->createData($this->_applyExtras($attributes));
     }
 
-    /**
-     * Is the linked stylesheet a duplicate?
-     *
-     * @param  string $uri
-     * @return bool
-     */
+
     protected function _isDuplicateStylesheet($uri)
     {
         foreach ($this->getContainer() as $item) {

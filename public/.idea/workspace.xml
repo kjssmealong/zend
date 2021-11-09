@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c6a0164e-db8f-4276-9f64-fce6cf2302a3" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/css/apple-touch-icon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/system/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/css/color-purple.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/css/color.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/css/font-awesome.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/css/icomoon.css" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/system/css/icomoon.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/css/jquery-ui.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/css/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/css/normalize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/css/owl.carousel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/css/responsive.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/css/transitions.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/fonts/fontawesome-webfont3e6e.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/fonts/fontawesome-webfont3e6e.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/fonts/fontawesome-webfont3e6e.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/fonts/fontawesome-webfont3e6e.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/fonts/fontawesome-webfont3e6e.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/fonts/fontawesome-webfontd41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/fonts/glyphicons-halflings-regulard41d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/fonts/icomoonbd7d.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/fonts/icomoonbd7d.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/fonts/icomoonbd7d.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/fonts/icomoonbd7d.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/AdminLTELogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/arrow-down.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-08.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-09.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-16.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-17.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-18.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-19.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-20.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-21.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-22.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-23.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-24.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-25.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/author/imag-26.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/avatar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/avatar04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/avatar2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/avatar3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/avatar5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/blog/img-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/blog/img-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/blog/img-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/blog/img-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/blog/img-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/blog/img-06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/blog/img-07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/blog/img-08.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/blog/img-09.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/blog/img-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/blog/img-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/blog/img-12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/blog/img-13.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/blog/img-14.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/blog/img-15.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/books/bookpattren.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/books/img-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/books/img-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/books/img-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/books/img-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/books/img-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/books/img-06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/books/img-07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/books/img-08.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/books/img-09.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/books/img-10.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/books/img-11.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/books/img-12.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/comingsoon-bg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/flaticon/backup.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/flaticon/license/license.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/flaticon/svg/001-business-and-finance.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/flaticon/svg/002-open-24-hours.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/flaticon/svg/003-social-network.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/flaticon/svg/004-offer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/flaticon/svg/005-discount.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/flaticon/svg/006-timer.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/flogo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/hero_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/img-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/img-01.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/img-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/img-02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/img-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/img-03.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/img-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/img-04.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/img-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/img_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/img_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/img_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/img_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/instagram/img-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/instagram/img-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/instagram/img-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/instagram/img-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/instagram/img-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/instagram/img-06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/instagram/img-07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/instagram/img-08.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/instagram/img-09.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/logo-02.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/logo_footer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/owl.video.play.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/parallax/bgparallax-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/parallax/bgparallax-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/parallax/bgparallax-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/parallax/bgparallax-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/parallax/bgparallax-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/parallax/bgparallax-06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/parallax/bgparallax-07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/paymenticon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/person_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/system/images/person_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/person_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/system/images/person_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/person_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/system/images/person_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/person_4.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/system/images/person_4.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/placeholder.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/placeholdervtwo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/product_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/product_1636342579.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/product_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/product_3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/product_4.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/product_5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/product_6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/product_7.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/product_8.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/products/img-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/products/img-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/products/img-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/products/img-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/products/img-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/products/img-06.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/products/img-07.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/team/img-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/team/img-02.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/team/img-03.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/team/img-04.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/team/img-05.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/ui-icons_444444_256x240.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/ui-icons_555555_256x240.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/ui-icons_777620_256x240.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/ui-icons_777777_256x240.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/ui-icons_cc0000_256x240.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/ui-icons_ffffff_256x240.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/images/users/img-01.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/system/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/js/appear.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/js/countTo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/js/countdown.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/js/gmap3.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/js/jquery-ui.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/js/jquery.vide.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/system/js/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/js/owl.carousel.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/system/js/owl.carousel.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/js/parallax.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/js/vendor/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/js/vendor/jquery-library.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/user/system/template.ini" beforeDir="false" afterPath="$PROJECT_DIR$/templates/user/system/template.ini" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="20fAgpAcsG67mkNiyZl2XBS91E2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c6a0164e-db8f-4276-9f64-fce6cf2302a3" name="Changes" comment="" />
+      <created>1636425381885</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1636425381885</updated>
+      <workItem from="1636425383575" duration="13000" />
+    </task>
+    <servers />
+  </component>
+</project>

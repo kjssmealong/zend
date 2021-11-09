@@ -254,7 +254,7 @@ class Zend_Service_LiveDocx
             } catch (Exception $e) {
                 require_once 'Zend/Service/LiveDocx/Exception.php';
                 throw new Zend_Service_LiveDocx_Exception(
-                    'Cannot login into LiveDocx service - username and/or password are invalid', 0, $e
+                    'Cannot account into LiveDocx service - username and/or password are invalid', 0, $e
                 );
             }
         }

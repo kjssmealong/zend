@@ -11,8 +11,8 @@ class Admin_Form_CheckAuth{
                 die();
             }
         } else {
-            echo "Bạn chưa login";
-            echo '&nbsp'. '<a href="/zend/login">Login</a>';
+            echo "Bạn chưa account";
+            echo '&nbsp'. '<a href="/zend/account">Login</a>';
             die();
         }
     }

@@ -81,7 +81,7 @@ class Zend_Queue_Adapter_PlatformJobQueue extends Zend_Queue_Adapter_AdapterAbst
         }
         if (!$this->_zendQueue->login($options['password'])) {
             require_once 'Zend/Queue/Exception.php';
-            throw new Zend_Queue_Exception('Job Queue login failed');
+            throw new Zend_Queue_Exception('Job Queue account failed');
         }
 
         if ($this->_queue) {
@@ -337,7 +337,7 @@ class Zend_Queue_Adapter_PlatformJobQueue extends Zend_Queue_Adapter_AdapterAbst
         }
         if (!$this->_zendQueue->login($options['password'])) {
             require_once 'Zend/Queue/Exception.php';
-            throw new Zend_Queue_Exception('Job Queue login failed');
+            throw new Zend_Queue_Exception('Job Queue account failed');
         }
     }
 }

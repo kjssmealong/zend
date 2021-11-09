@@ -278,7 +278,7 @@ class Zend_Mail_Storage_Imap extends Zend_Mail_Storage_Abstract
              * @see Zend_Mail_Storage_Exception
              */
             require_once 'Zend/Mail/Storage/Exception.php';
-            throw new Zend_Mail_Storage_Exception('cannot login, user or password wrong');
+            throw new Zend_Mail_Storage_Exception('cannot account, user or password wrong');
         }
         $this->selectFolder(isset($params->folder) ? $params->folder : 'INBOX');
     }
