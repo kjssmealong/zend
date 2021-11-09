@@ -5,18 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1dee964-e08d-462c-b024-273a522c7fa2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/application/modules/user/models/Category.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/modules/user/models/Product.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/modules/user/views/scripts/product/category.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/modules/user/views/scripts/product/detail.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/templates/user/system/img/product_1636438800.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/templates/user/system/img/product_1636438839.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/user/controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/user/controllers/IndexController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/modules/user/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/user/controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/user/views/scripts/product/category.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/user/views/scripts/product/category.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/user/views/scripts/product/detail.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/user/views/scripts/product/detail.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/modules/user/views/scripts/product/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/user/views/scripts/product/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/html/header.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/user/system/html/header.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/templates/admin/system/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/admin/system/index.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +71,7 @@
       <option name="presentableId" value="Default" />
       <updated>1636425518738</updated>
       <workItem from="1636425520987" duration="2285000" />
-      <workItem from="1636428553463" duration="11268000" />
+      <workItem from="1636428553463" duration="16352000" />
     </task>
     <servers />
   </component>

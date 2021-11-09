@@ -41,6 +41,9 @@ class ProductController extends Mylib_Controller_Action
 
     public function detailAction()
     {
+        $tblCat = new User_Model_Category();
+        $this->view->CatItem = $tblCat->getListItem(null, array('task' => 'category-list'));
+
         $tblProduct = new User_Model_Product();
         $this->view->Item = $tblProduct->getInfo($this->_arrParam, array('task' => 'product-detail'));
     }

@@ -1,6 +1,6 @@
 <?php
 $row = $this->Item;
-
+$linkDetail = $this->baseUrl($this->currentController . '/detail/id/' . $row['id']);
 
 ?>
 <div class="single-product-area section-padding-100 clearfix">
@@ -10,9 +10,6 @@ $row = $this->Item;
             <div class="col-12">
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mt-50">
-                        <li class="breadcrumb-item"><a href="#">Home</a></li>
-                        <li class="breadcrumb-item"><a href="#">Furniture</a></li>
-                        <li class="breadcrumb-item"><a href="#">Chairs</a></li>
                         <li class="breadcrumb-item active" aria-current="page"><?php echo $row['name']?></li>
                     </ol>
                 </nav>
@@ -64,7 +61,7 @@ $row = $this->Item;
                     <div class="product-meta-data">
                         <div class="line"></div>
                         <p class="product-price">$<?php echo $row['pricesale'];?></p>
-                        <a href="product-details.html">
+                        <a href="<?php echo $linkDetail . '/' . $row['id']?>">
                             <h6><?php echo $row['name'];?></h6>
                         </a>
                         <!-- Ratings & Review -->
@@ -85,7 +82,7 @@ $row = $this->Item;
                     </div>
 
                     <div class="short_overview my-5">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid quae eveniet culpa officia quidem mollitia impedit iste asperiores nisi reprehenderit consequatur, autem, nostrum pariatur enim?</p>
+                        <p><?php echo $row['detail']?></p>
                     </div>
 
                     <!-- Add to Cart Form -->

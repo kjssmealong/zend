@@ -7,6 +7,7 @@ $linkDelete = $this->baseUrl($this->currentController . '/delete/id');
 $linkRestore = $this->baseUrl($this->currentController . '/Restore/id/');
 $linkDel = $this->baseUrl($this->currentController . '/Delete/id/');
 ?>
+<div id="content">
 <div class="content-wrapper my-2">
     <div class="card">
         <div class="card-header">
@@ -58,7 +59,9 @@ $linkDel = $this->baseUrl($this->currentController . '/Delete/id/');
         </div>
     </div>
 </div>
+</div>
 <script>
+
     $(document).ready(function() {
         $('#myTable').DataTable();
     });
