@@ -6,12 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e1dee964-e08d-462c-b024-273a522c7fa2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/user/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/user/controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/user/views/scripts/product/category.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/user/views/scripts/product/category.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/user/views/scripts/product/detail.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/user/views/scripts/product/detail.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/user/views/scripts/product/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/user/views/scripts/product/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/admin/system/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/admin/system/index.phtml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +49,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -80,5 +75,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
