@@ -24,6 +24,7 @@ class Admin_Model_Category extends Zend_Db_Table
 
   public function saveItem($arrParam = null, $option = null)
   {
+      $where = 'id = ' . $arrParam['id'];
     if ($option['task'] == 'category-add') {
       $row = $this->fetchNew();
       $row->name = $arrParam['name'];
@@ -32,7 +33,6 @@ class Admin_Model_Category extends Zend_Db_Table
     }
 
     if ($option['task'] == 'category-edit') {
-      $where = 'id = ' . $arrParam['id'];
       $row = $this->fetchRow($where);
       $row->name = $arrParam['name'];
       $row->status = $arrParam['status'];
@@ -40,7 +40,6 @@ class Admin_Model_Category extends Zend_Db_Table
     }
 
     if ($option['task'] == 'category-delete') {
-      $where = 'id = ' . $arrParam['id'];
       $row = $this->fetchRow($where);
       $row->updated_at = date('Y-m-d H:i:s');
       $row->status = 0;
@@ -48,11 +47,10 @@ class Admin_Model_Category extends Zend_Db_Table
     }
 
     if ($option['task'] == 'category-restore') {
-      $where = 'id = ' . $arrParam['id'];
-      $row = $this->fetchRow($where);
-      $row->updated_at = date('Y-m-d H:i:s');
-      $row->status = 1;
-      $row->save();
+        $row = $this->fetchRow($where);
+        $row->updated_at = date('Y-m-d H:i:s');
+        $row->status = (!$arrParam['status'])  ;
+        $row->save();
     }
   }
 
