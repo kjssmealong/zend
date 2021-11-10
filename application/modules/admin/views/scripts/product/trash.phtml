@@ -34,15 +34,15 @@ $linkRestore = $this->baseUrl($this->currentController . '/restore/id/');
                 <?php foreach($this->Items  as $row) : ?>
                     <tr>
                         <th>
-                            <img src="<?php echo $this->imgUrl . '/' . $row['img']; ?>" class="img-fluid" style="width:100px; height:100px;">
+                            <img src="<?php echo $this->adminImgUrl . '/' . $row['img']; ?>" class="img-fluid" style="width:100px; height:100px;">
                         </th>
                         <td><?php echo $row['name']; ?></td>
                         <td><?php echo $row['catid']; ?></td>
                         <td class="text-center" style="padding-top: 35px">
                         <a class="btn btn-sm btn-success" 
-                        href="<?php echo $linkRestore.$row['id']; ?>"><i class="fas fa-trash-restore"></i></a>
+                        href="#" onclick="restoreProduct(<?php echo $row['id']; ?>)"><i class="fas fa-trash-restore"></i></a>
                         <a class="btn btn-sm btn-danger" 
-                        href="<?php echo $linkDel.$row['id']; ?>"><i class="fas fa-trash"></i></a>
+                        href="#" onclick="deleteProduct(<?php echo $row['id']; ?>)"><i class="fas fa-trash"></i></a>
                         </td>
                         <td class="text-center"><?php echo $row['id']; ?></td>
                     </tr>
@@ -53,6 +53,74 @@ $linkRestore = $this->baseUrl($this->currentController . '/restore/id/');
     </div>
 </div>
 <script>
+
+    function deleteProduct(id) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    deleteAjax(id),
+                    'success'
+                )
+            }
+        })
+    }
+
+
+
+    function deleteAjax(id) {
+        $.ajax({
+            type: "POST",
+            url: 'http://localhost/zend/admin/product/deltrash/id/'+id,
+            data: id,
+            success: function (e) {
+                window.location.reload(e);
+            },
+            contentType: "application/json",
+            dataType:  "text"
+        });
+    }
+
+    function restoreProduct(id) {
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                Swal.fire(
+                    restoreAjax(id),
+                    'success'
+                )
+            }
+        })
+    }
+
+    function restoreAjax(id) {
+        $.ajax({
+            type: "POST",
+            url: 'http://localhost/zend/admin/product/restore/id/'+id,
+            data: id,
+            success: function (e) {
+                window.location.reload(e);
+            },
+            contentType: "application/json",
+            dataType:  "text"
+        });
+    }
+
+
     $(document).ready(function() {
         $('#myTable').DataTable();
     });

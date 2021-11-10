@@ -42,7 +42,7 @@ $linkDelete = $this->baseUrl($this->currentController . '/delete/id');
                                     <a class="btn btn-sm btn-danger" href="#"><i class="fas fa-toggle-off"></i></a>
                                 <?php  } ?>
                                 <a class="btn btn-sm btn-info" href="<?php echo $linkEdit . '/' . $val['id']?>" ><i class="fas fa-edit"></i></a>
-                                <a class="btn btn-sm btn-danger" href="<?php echo $linkDelete . '/' . $val['id']?> "><i class="fas fa-trash"></i></a>
+                                <a class="btn btn-sm btn-danger"  onclick="deleteProduct()"><i class="fas fa-trash"></i></a>
                             </td>
                             <td class="text-center"><?php echo $val['id']; ?></td>
                         </tr>
@@ -53,6 +53,10 @@ $linkDelete = $this->baseUrl($this->currentController . '/delete/id');
     </div>
 </div>
 <script>
+
+
+
+
     $(document).ready(function() {
         $('#myTable').DataTable();
     });

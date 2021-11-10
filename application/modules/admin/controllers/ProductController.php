@@ -12,6 +12,8 @@ class Admin_ProductController extends Mylib_Controller_Action
     //đường dẫn action
     protected $_actionMain;
 
+    protected $tblCat;
+    protected $tblProduct;
 
     public function init()
     {
@@ -28,14 +30,16 @@ class Admin_ProductController extends Mylib_Controller_Action
         $this->view->currentController = $this->_currentController;
         $this->view->actionMain = $this->_actionMain;
 
+        $this->tblCat = new Admin_Model_Category();
+        $this->tblProduct = new Admin_Model_Product();
         $template_path = TEMPLATE_PATH . "/admin/system";
         $this->loadTemplate($template_path, 'template.ini', 'template');
     }
 
     public function indexAction()
     {
-        $tblProduct = new Admin_Model_Product();
-        $this->view->Items = $tblProduct->getListItem(null, array('task' => 'product-list'));
+
+        $this->view->Items = $this->tblProduct->getListItem(null, array('task' => 'product-list'));
     }
 
     public function trashAction()
@@ -46,8 +50,8 @@ class Admin_ProductController extends Mylib_Controller_Action
 
     public function addAction()
     {
-        $tblCat = new Admin_Model_Category();
-        $this->view->CatItems = $tblCat->getListItem(null, array('task' => 'category-list'));
+
+        $this->view->CatItems = $this->tblCat->getListItem(null, array('task' => 'category-list'));
 
         if ($this->_request->isPost()) {
             $validator = new Admin_Form_ValidateProduct($this->_arrParam);
@@ -76,11 +80,9 @@ class Admin_ProductController extends Mylib_Controller_Action
 
     public function editAction()
     {
-        $tblCat = new Admin_Model_Category();
-        $this->view->CatItems = $tblCat->getListItem(null, array('task' => 'category-list'));
+        $this->view->CatItems = $this->tblCat->getListItem(null, array('task' => 'category-list'));
 
-        $tblProduct = new Admin_Model_Product();
-        $this->view->Item = $tblProduct->editIem($this->_arrParam, array('task' => 'product-edit'));
+        $this->view->Item = $this->tblProduct->editIem($this->_arrParam, array('task' => 'product-edit'));
 
         if ($this->_request->isPost()) {
             $validator = new Admin_Form_ValidateProduct($this->_arrParam);
@@ -90,9 +92,8 @@ class Admin_ProductController extends Mylib_Controller_Action
 
             }else
             {
-                $tblProduct = new Admin_Model_Product();
                 $arrParam = $validator->getData(array('upload' => true));
-                $tblProduct->saveItem($arrParam, array('task' => 'product-edit'));
+                $this->tblProduct->saveItem($arrParam, array('task' => 'product-edit'));
                 $this->_redirect($this->_actionMain);
             }
 
@@ -101,36 +102,34 @@ class Admin_ProductController extends Mylib_Controller_Action
 
     public function deleteAction()
     {
-        $tblProduct = new Admin_Model_Product();
-        $this->view->Item = $tblProduct->editIem($this->_arrParam, array('task' => 'product-delete'));
+        $this->view->Item = $this->tblProduct->editIem($this->_arrParam, array('task' => 'product-delete'));
 
         if ($this->_request->isPost()) {
-            $tblProduct = new Admin_Model_Product();
-            $tblProduct->saveItem($this->_arrParam, array('task' => 'product-delete'));
-            $this->_redirect($this->_actionMain);
+            $this->tblProduct->saveItem($this->_arrParam, array('task' => 'product-delete'));
+            echo json_encode($this->_arrParam);
         }
     }
 
     public function restoreAction()
     {
-        $tblProduct = new Admin_Model_Product();
-        $this->view->Item = $tblProduct->editIem($this->_arrParam, array('task' => 'product-restore'));
+        $result = new stdClass();
+        $result->isSuccess = false;
+        $this->view->Item = $this->tblProduct->editIem($this->_arrParam, array('task' => 'product-restore'));
 
         if ($this->_request->isPost()) {
-            $tblProduct = new Admin_Model_Product();
-            $tblProduct->saveItem($this->_arrParam, array('task' => 'product-restore'));
-            $this->_redirect($this->_actionMain);
+            $this->tblProduct->saveItem($this->_arrParam, array('task' => 'product-restore'));
+            $result->isSuccess = true;
+
         }
+        echo json_encode($this->_arrParam);
     }
 
     public function deltrashAction()
     {
-        $tblProduct = new Admin_Model_Product();
-        $this->view->Item = $tblProduct->editIem($this->_arrParam, array('task' => 'product-deltrash'));
+        $this->view->Item = $this->tblProduct->editIem($this->_arrParam, array('task' => 'product-deltrash'));
 
         if ($this->_request->isPost()) {
-            $tblProduct = new Admin_Model_Product();
-            $tblProduct->deleteItem($this->_arrParam, array('task' => 'product-deltrash'));
+            $this->tblProduct->deleteItem($this->_arrParam, array('task' => 'product-deltrash'));
             $this->_redirect($this->_currentController . '/trash');
         }
     }
