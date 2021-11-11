@@ -15,8 +15,18 @@ class Admin_IndexController extends Mylib_Controller_Action
 
     public function init()
     {
-        $auth = new Admin_Form_CheckAuth();
-        $auth->auth();
+        $auth = Zend_Auth::getInstance();
+        if ($auth->hasIdentity()) {
+            $info = $auth->getIdentity();
+
+            if ($info->access != 1) {
+                echo "Bạn không có quyền truy cập";
+                echo '&nbsp'. '<a href="/zend/user">Chuyển đến trang chủ</a>';
+                die();
+            }
+        } else {
+            $this->_redirect($this->_currentController . 'admin/login');
+        }
 
         //Mảng tham số nhận được ở mỗi action
         $this->_arrParam = $this->_request->getParams();
@@ -31,6 +41,7 @@ class Admin_IndexController extends Mylib_Controller_Action
 
         $template_path = TEMPLATE_PATH . "/admin/system";
         $this->loadTemplate($template_path, 'template.ini', 'template');
+
     }
 
     public function indexAction()
@@ -40,6 +51,8 @@ class Admin_IndexController extends Mylib_Controller_Action
 
     public function infoAction()
     {
+        $template_path = TEMPLATE_PATH . "/admin/system";
+        $this->loadTemplate($template_path, 'template.ini', 'template');
         $login = Zend_Auth::getInstance();
         if ($login->hasIdentity()) {
             $info = $login->getIdentity();
