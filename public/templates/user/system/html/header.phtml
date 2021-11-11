@@ -6,13 +6,14 @@
     </div>
     <!-- Logo -->
     <div class="logo">
-        <a href="<?php echo $this->baseUrl('/user')?>"><img src="<?php echo $this->imgUrl; ?>/core-img/logo.png" alt=""></a>
+        <a href="<?php echo $this->baseUrl('/user') ?>"><img src="<?php echo $this->imgUrl; ?>/core-img/logo.png"
+                                                             alt=""></a>
     </div>
     <!-- Amado Nav -->
     <nav class="amado-nav">
         <ul>
-            <li class="active"><a href="<?php echo $this->baseUrl('/user')?>">Home</a></li>
-            <li><a href="<?php echo $this->baseUrl('/product')?>">Shop</a></li>
+            <li class="active"><a href="<?php echo $this->baseUrl('/user') ?>">Home</a></li>
+            <li><a href="<?php echo $this->baseUrl('/product') ?>">Shop</a></li>
         </ul>
     </nav>
     <!-- Button Group -->
@@ -22,12 +23,15 @@
         if ($auth->hasIdentity()) {
             $info = $auth->getIdentity();
             ?>
-            <a href="#" class="btn amado-btn mb-15">Hi <?php echo $info->fullname?></a>
-            <a href="<?php echo $this->baseUrl('account/index/logout')?>" class="btn amado-btn active">Logout</a>
+            <div class="btn amado-btn mb-15">Hi <?php echo $info->fullname ?></div>
+            <?php if ($info->access) { ?>
+                <a href="<?php echo $this->baseUrl('admin') ?>" class="btn amado-btn mb-15">Administration</a>
+            <?php } ?>
+            <a href="<?php echo $this->baseUrl('account/index/logout') ?>" class="btn amado-btn active">Logout</a>
             <?php
         } else {
             ?>
-            <a href="<?php echo $this->baseUrl('account/')?>" class="btn amado-btn active">Login</a>
+            <a href="<?php echo $this->baseUrl('account/') ?>" class="btn amado-btn active">Login</a>
             <?php
         }
         ?>

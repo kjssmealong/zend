@@ -1,5 +1,5 @@
 <?php
-$linkCat = $this->baseUrl($this->currentController . '/detail/id')
+$linkDetail = $this->baseUrl($this->currentController . 'detail/id')
 ?>
 
 <div class="products-catagories-area clearfix">
@@ -8,7 +8,7 @@ $linkCat = $this->baseUrl($this->currentController . '/detail/id')
         <!-- Single Catagory -->
         <?php foreach ($this->Items as $value) :?>
         <div class="single-products-catagory clearfix">
-            <a href="<?php echo $linkCat . '/' . $value['id'] ;?>">
+            <a href="<?php echo $linkDetail . '/' . $value['id'] ;?>">
                 <img src="<?php echo $this->imgUrl . '/' . $value['img']; ?>" alt="">
                 <!-- Hover Content -->
                 <div class="hover-content">

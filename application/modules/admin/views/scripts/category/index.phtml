@@ -38,12 +38,12 @@ $linkDelete = $this->baseUrl($this->currentController . '/delete/id');
                                 $icon =  ($val['status'] == 1) ? ' fa-toggle-on' : 'fa-toggle-off';
 
                                 ?>
-                                <a class="btn btn-sm <?php echo $btn?>" href="#" onclick="restoreAjax(<?php echo $val['id'] . ',' . $val['status']; ?>)"><i class="fas <?php echo $icon?>"></i></a>
+                                <a class="btn btn-sm <?php echo $btn?>" href="#" onclick="restoreAjax(<?php echo $val['id'] . ',' . $val['status']; ?>, 'category')"><i class="fas <?php echo $icon?>"></i></a>
                             </td>
                             <td class="text-center" style="padding-top: 35px">
                                 <a class="btn btn-sm btn-info" href="<?php echo $linkEdit . '/' . $val['id'] ?>"><i
                                             class="fas fa-edit"></i></a>
-                                <a class="btn btn-sm btn-danger"  href="#" onclick="deleteCat(<?php echo $val['id']; ?>)"><i
+                                <a class="btn btn-sm btn-danger"  href="#" onclick="deleteFunction(<?php echo $val['id']; ?> , 'category')"><i
                                             class="fas fa-trash"></i></a>
                             </td>
 
@@ -91,20 +91,7 @@ $linkDelete = $this->baseUrl($this->currentController . '/delete/id');
         });
     }
 
-    function restoreAjax(id , status) {
-        $.ajax({
-            type: "POST",
-            url: 'http://localhost/zend/admin/category/restore/id/'+id,
-            data: 'id=' + id + '&status=' + status,
-            success: function (e) {
-                var color = status ? 'btn-danger'  : 'btn-success';
-                var icon = status ?  'fa-toggle-off' : 'fa-toggle-on' ;
-                var testStatus = status ? 0 : 1;
-                var test = "<a class='btn btn-sm " + color + "'href='#' onclick='restoreAjax(" + id + "," + testStatus + ")'><i class='fas " + icon +"'></i></a>";
-                $('#status-' + id).html(test);
-            },
-        });
-    }
+
 
     $(document).ready(function() {
         $('#myTable').DataTable();

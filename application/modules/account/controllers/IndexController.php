@@ -34,7 +34,7 @@ class Account_IndexController extends Mylib_Controller_Action
 
         $auth = Zend_Auth::getInstance();
         if ($auth->hasIdentity()) {
-            $this->_redirect($this->_currentController . '/account');
+            $this->_redirect($this->_currentController . '/login');
         } else {
             $authAdapter = new Zend_Auth_Adapter_DbTable($db);
 
@@ -59,8 +59,6 @@ class Account_IndexController extends Mylib_Controller_Action
                     $error = $result->getMessages();
                     echo '<br>' . current($error);
                 } else {
-                    echo "account thành công";
-
                     //lấy thông tin của tài khoản đưa vào ss
                     $omitColums = array('password');
                     $data = $authAdapter->getResultRowObject(null, $omitColums);

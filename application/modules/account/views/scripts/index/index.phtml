@@ -7,7 +7,7 @@ $linkLogin = $this->baseUrl($this->currentController);
     <meta charset="utf-8">
 </head>
 <body>
-<form name="appForm" action="" method="post" >
+<form method="POST" action="<?php echo $linkLogin ?>">
     <fieldset>
         <legend>Đăng nhập</legend>
         <table>
@@ -20,18 +20,10 @@ $linkLogin = $this->baseUrl($this->currentController);
                 <td><input type="password" name="password" size="30"></td>
             </tr>
             <tr>
-                <td colspan="2" align="center"> <a style="text-decoration: none; color: black; border: 1px solid; padding: 1px; background-color: cornflowerblue" href="#" onclick="OnSubmitForm('<?php echo $linkLogin ?>')">Đăng nhập</a></td>
-
+                <td colspan="2" align="center"> <input type="submit" name="btn_submit" value="Đăng nhập"></td>
             </tr>
         </table>
     </fieldset>
-</form>
+
 </body>
 </html>
-<script>
-    function OnSubmitForm(url){
-        document.appForm.action = url;
-        document.appForm.submit();
-        return true;
-    }
-</script>
