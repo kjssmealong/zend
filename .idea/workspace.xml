@@ -5,16 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1dee964-e08d-462c-b024-273a522c7fa2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/restoretrash.phtml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/templates/user/system/img/product_1636947727.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/category/restoretrash.phtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/templates/user/system/img/product_1636951875.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/modules/admin/controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/admin/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/controllers/ProductController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/admin/models/Category.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/models/Category.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/modules/admin/models/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/models/Product.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/restore.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/restore.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/admin/views/scripts/category/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/category/index.phtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/admin/views/scripts/category/trash.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/category/trash.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/trash.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/trash.phtml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/templates/admin/system/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/admin/system/js/ajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/user/system/img/product_1636438800.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,7 @@
     <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
     <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/modules/user" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/application/modules/admin/views/scripts/category" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -68,6 +68,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xampp\htdocs\zend\application\modules\admin\views\scripts\category" />
       <recent name="D:\xampp\htdocs\zend\application\modules\user" />
     </key>
     <key name="MoveFile.RECENT_KEYS">

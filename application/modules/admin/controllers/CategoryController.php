@@ -11,6 +11,8 @@ class Admin_CategoryController extends Mylib_Controller_Action{
     //đường dẫn action
     protected $_actionMain;
 
+    protected $tblCategory;
+
 
     public function init(){
         $auth = new Admin_Form_CheckAuth();
@@ -25,72 +27,91 @@ class Admin_CategoryController extends Mylib_Controller_Action{
         $this->view->arrParam = $this->_arrParam;
         $this->view->currentController = $this->_currentController;
         $this->view->actionMain = $this->_actionMain;
-        
+
+        $tblCategory = new Admin_Model_Category();
+
         $template_path = TEMPLATE_PATH . "/admin/system";
         $this->loadTemplate($template_path, 'template.ini', 'template');
     }
 
     public function indexAction(){
-        $tblCategory = new Admin_Model_Category();
-        $this->view->Items = $tblCategory->getListItem(null , array('task'=>'category-list'));
+
+        $this->view->Items = $this->tblCategory->getListItem(null , array('task'=>'category-list'));
     }
 
     public function trashAction(){
-        $tblCategory = new Admin_Model_Category();
-        $this->view->Items = $tblCategory->getListTrash(null , array('task'=>'category-trash'));
+        $this->view->Items = $this->tblCategory->getListTrash(null , array('task'=>'category-trash'));
     }
 
     public function addAction(){
         if($this->_request->isPost()){
-            $tblCategory = new Admin_Model_Category();
-            $tblCategory->saveItem($this->_arrParam, array('task'=>'category-add'));
-
+            $this->tblCategory->saveItem($this->_arrParam, array('task'=>'category-add'));
             $this->_redirect($this->_actionMain);
+        }
+        else{
+            echo "error";
         }
     }
 
     public function editAction(){
-        $tblCategory = new Admin_Model_Category();
-        $this->view->Item = $tblCategory->editIem($this->_arrParam , array('task'=>'category-edit'));
+        $this->view->Item = $this->tblCategory->editIem($this->_arrParam , array('task'=>'category-edit'));
 
         if($this->_request->isPost()){
-            $tblCategory = new Admin_Model_Category();
-            $tblCategory->saveItem($this->_arrParam, array('task'=>'category-edit'));
+            $this->tblCategory->saveItem($this->_arrParam, array('task'=>'category-edit'));
             $this->_redirect($this->_actionMain);
+        }
+        else{
+            echo "error";
         }
     }
 
     public function deleteAction(){
-        $tblCategory = new Admin_Model_Category();
-        $this->view->Item = $tblCategory->editIem($this->_arrParam , array('task'=>'category-delete'));
+        $this->view->Item = $this->tblCategory->editIem($this->_arrParam , array('task'=>'category-delete'));
 
         if($this->_request->isPost()){
-            $tblCategory = new Admin_Model_Category();
-            $tblCategory->saveItem($this->_arrParam, array('task'=>'category-delete'));
-            $this->_redirect($this->_actionMain);
+            $this->tblCategory->saveItem($this->_arrParam, array('task'=>'category-delete'));
+            echo json_encode($this->_arrParam);
+        }
+        else{
+            echo "error";
         }
     }
 
     public function restoreAction(){
-        $tblCategory = new Admin_Model_Category();
-        $this->view->Item = $tblCategory->editIem($this->_arrParam , array('task'=>'category-restore'));
+        $this->view->Item = $this->tblCategory->editIem($this->_arrParam , array('task'=>'category-restore'));
 
         if($this->_request->isPost()){
-            $tblCategory = new Admin_Model_Category();
-            $tblCategory->saveItem($this->_arrParam, array('task'=>'category-restore'));
-            $this->_redirect($this->_actionMain);
+            $this->tblCategory->saveItem($this->_arrParam, array('task'=>'category-restore'));
+            echo json_encode($this->_arrParam);
 
+        }
+        else{
+            echo "error";
+        }
+    }
+
+    public function restoretrashAction()
+    {
+        $this->_helper->viewRenderer->setNoRender(true);
+        $this->_helper->layout->disableLayout();
+        if ($this->_request->isPost()) {
+            $this->tblCategory->saveItem($this->_arrParam, array('task'=>'category-restore-trash'));
+            echo json_encode($this->_arrParam);
+        }
+        else{
+            echo "error";
         }
     }
 
     public function deltrashAction(){
-        $tblCategory = new Admin_Model_Category();
-        $this->view->Item = $tblCategory->editIem($this->_arrParam , array('task'=>'category-deltrash'));
+        $this->view->Item = $this->tblCategory->editIem($this->_arrParam , array('task'=>'category-deltrash'));
 
         if($this->_request->isPost()){
-            $tblCategory = new Admin_Model_Category();
-            $tblCategory->deleteItem($this->_arrParam, array('task'=>'category-deltrash'));
-            $this->_redirect($this->_currentController . '/trash');
+            $this->tblCategory->deleteItem($this->_arrParam, array('task'=>'category-deltrash'));
+            echo json_encode($this->_arrParam);
+        }
+        else{
+            echo "error";
         }
     }
 

@@ -34,9 +34,9 @@ $linkRestore = $this->baseUrl($this->currentController . '/restore/id/');
                         <td><?php echo $row['name']; ?></td>
                         <td class="text-center" style="padding-top: 35px">
                         <a class="btn btn-sm btn-success" 
-                        href="<?php echo $linkRestore.$row['id']; ?>"><i class="fas fa-trash-restore"></i></a>
+                        href="#" onclick="restoretrashAjax(<?php echo $row['id'] ; ?>, 'category')"><i class="fas fa-trash-restore"></i></a>
                         <a class="btn btn-sm btn-danger" 
-                        href="<?php echo $linkDel.$row['id']; ?>"><i class="fas fa-trash"></i></a>
+                        href="#" onclick="deltrashAjax(<?php echo $row['id']; ?>, 'category')"><i class="fas fa-trash"></i></a>
                         </td>
                         <td class="text-center"><?php echo $row['id']; ?></td>
                     </tr>

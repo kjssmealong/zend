@@ -40,9 +40,9 @@ $linkRestore = $this->baseUrl($this->currentController . '/restoretrash/id/');
                         <td><?php echo $row['catid']; ?></td>
                         <td class="text-center" style="padding-top: 35px">
                         <a class="btn btn-sm btn-success" 
-                        href="#" onclick="restoretrasgAjax(<?php echo $row['id'] ; ?>, 'product')"><i class="fas fa-trash-restore"></i></a>
+                        href="#" onclick="restoretrashAjax(<?php echo $row['id'] ; ?>, 'product')"><i class="fas fa-trash-restore"></i></a>
                         <a class="btn btn-sm btn-danger" 
-                        href="#" onclick="deltrasgAjax(<?php echo $row['id']; ?>, 'product')"><i class="fas fa-trash"></i></a>
+                        href="#" onclick="deltrashAjax(<?php echo $row['id']; ?>, 'product')"><i class="fas fa-trash"></i></a>
                         </td>
                         <td class="text-center"><?php echo $row['id']; ?></td>
                     </tr>

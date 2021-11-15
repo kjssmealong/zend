@@ -81,7 +81,6 @@ class Admin_Model_Product extends Zend_Db_Table
             $row->updated_at = date('Y-m-d H:i:s');
             $row->is_delete = 0;
             $row->save();
-
         }
     }
 
