@@ -49,12 +49,12 @@ $linkDel = $this->baseUrl($this->currentController . '/Delete/id/');
                                 $icon =  ($val['status'] == 1) ? ' fa-toggle-on' : 'fa-toggle-off';
 
                                 ?>
-                                    <a class="btn btn-sm <?php echo $btn?>" href="javascript:void(0)" onclick="restoreAjax(<?php echo $val['id'] . ',' . $val['status']; ?>, 'product')"><i class="fas <?php echo $icon?>"></i></a>
+                                    <a class="btn btn-sm <?php echo $btn?>" href="javascript:void(0)" onclick="restoreAjax(<?php echo $val['id'] . ',' . $val['status']; ?>)"><i class="fas <?php echo $icon?>"></i></a>
                            </td>
                             <td class="text-center" style="padding-top: 35px">
                                 <a class="btn btn-sm btn-info" href="<?php echo $linkEdit . '/' . $val['id'] ?>"><i
                                             class="fas fa-edit"></i></a>
-                                <a class="btn btn-sm btn-danger"  href="javascript:void(0)" onclick="deleteFunction(<?php echo $val['id']; ?> , 'product')"><i
+                                <a class="btn btn-sm btn-danger"  href="javascript:void(0)" onclick="deleteFunction(<?php echo $val['id']; ?>)"><i
                                             class="fas fa-trash"></i></a>
                             </td>
 

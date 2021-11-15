@@ -3,6 +3,7 @@ $(document).ready(function() {
     $('#myTable tbody').on( 'click', 'tr', function () {
         if ( $(this).hasClass('selected') ) {
             $(this).removeClass('selected');
+            $(this).addClass('selected');
         }
         else {
             table.$('tr.selected').removeClass('selected');
@@ -12,7 +13,7 @@ $(document).ready(function() {
 
 } );
 
-function restoreAjax(id , status, file) {
+function restoreAjax(id , status) {
     $.ajax({
         type: "POST",
         url: "./restore/id/"+id,
@@ -21,7 +22,7 @@ function restoreAjax(id , status, file) {
             var color = status ? 'btn-danger'  : 'btn-success';
             var icon = status ?  'fa-toggle-off' : 'fa-toggle-on' ;
             var testStatus = status ? 0 : 1;
-            var test = "<a class='btn btn-sm " + color + "'href='javascript:void(0)'  onclick='restoreAjax(" + id + "," + testStatus + ",  `" +    file  + "`  )'><i class='fas " + icon +"'></i></a>";
+            var test = "<a class='btn btn-sm " + color + "'href='javascript:void(0)'  onclick='restoreAjax(" + id + "," + testStatus + " )'><i class='fas " + icon +"'></i></a>";
             $('#status-' + id).html(test);
         },
         error: function (e) {
@@ -30,7 +31,7 @@ function restoreAjax(id , status, file) {
     });
 }
 
-function deleteFunction(id , file) {
+function deleteFunction(id) {
     Swal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
@@ -42,7 +43,7 @@ function deleteFunction(id , file) {
     }).then((result) => {
         if (result.isConfirmed) {
             Swal.fire(
-                deleteAjax(id, file),
+                deleteAjax(id),
                 'success'
             )
         }
@@ -51,7 +52,7 @@ function deleteFunction(id , file) {
 
 
 
-function restoretrashAjax(id , file) {
+function restoretrashAjax(id) {
     Swal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
@@ -81,7 +82,7 @@ function restoretrashAjax(id , file) {
     })
 }
 
-function deltrashAjax(id , file) {
+function deltrashAjax(id) {
     Swal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",
@@ -111,7 +112,7 @@ function deltrashAjax(id , file) {
     })
 }
 
-function deleteAjax(id, file) {
+function deleteAjax(id) {
     $.ajax({
         type: "POST",
         url: './delete/id/'+id,
