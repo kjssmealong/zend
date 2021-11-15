@@ -155,7 +155,7 @@ class Admin_ProductController extends Mylib_Controller_Action
 
         if ($this->_request->isPost()) {
             $this->tblProduct->deleteItem($this->_arrParam, array('task' => 'product-deltrash'));
-            $this->_redirect($this->_currentController . '/trash');
+            echo json_encode($this->_arrParam);
         }
         else{
             echo "error";
