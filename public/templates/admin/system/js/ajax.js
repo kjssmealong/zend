@@ -21,7 +21,7 @@ function restoreAjax(id , status, file) {
             var color = status ? 'btn-danger'  : 'btn-success';
             var icon = status ?  'fa-toggle-off' : 'fa-toggle-on' ;
             var testStatus = status ? 0 : 1;
-            var test = "<a class='btn btn-sm " + color + "'href='#'  onclick='restoreAjax(" + id + "," + testStatus + ",  `" +    file  + "`  )'><i class='fas " + icon +"'></i></a>";
+            var test = "<a class='btn btn-sm " + color + "'href='javascript:void(0)'  onclick='restoreAjax(" + id + "," + testStatus + ",  `" +    file  + "`  )'><i class='fas " + icon +"'></i></a>";
             $('#status-' + id).html(test);
         },
         error: function (e) {
