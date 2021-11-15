@@ -23,16 +23,17 @@ $linkRestore = $this->baseUrl($this->currentController . '/restoretrash/id/');
             <table id = "myTable" class="table table-triped table-bordered table-hover">
                 <thead class="thead-dark">
                     <tr>
+                        <th class="text-center" style="width: 20px;">ID</th>
                         <th style="width:100px;">Hình</th>
                         <th>Tên sản phẩm</th>
                         <th>Loài sản phẩm</th>
                         <th class="text-center">Chức năng</th>
-                        <th class="text-center" style="width: 20px;">ID</th>
                     </tr>
                 </thead>
                 <tbody>
                 <?php foreach($this->Items  as $row) : ?>
                     <tr>
+                        <td class="text-center"><?php echo $row['id']; ?></td>
                         <th>
                             <img src="<?php echo $this->adminImgUrl . '/' . $row['img']; ?>" class="img-fluid" style="width:100px; height:100px;">
                         </th>
@@ -44,7 +45,7 @@ $linkRestore = $this->baseUrl($this->currentController . '/restoretrash/id/');
                         <a class="btn btn-sm btn-danger" 
                         href="#" onclick="deltrashAjax(<?php echo $row['id']; ?>, 'product')"><i class="fas fa-trash"></i></a>
                         </td>
-                        <td class="text-center"><?php echo $row['id']; ?></td>
+
                     </tr>
                 <?php endforeach; ?>
                 </tbody>

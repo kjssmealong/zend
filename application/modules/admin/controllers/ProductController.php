@@ -144,6 +144,7 @@ class Admin_ProductController extends Mylib_Controller_Action
         }
         else{
             echo "error";
+            die();
         }
     }
 

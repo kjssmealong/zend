@@ -3,7 +3,6 @@ var pathArray = window.location.pathname.split( '/' );
 
 $(document).ready(function() {
     var table = $('#myTable').DataTable();
-
     $('#myTable tbody').on( 'click', 'tr', function () {
         if ( $(this).hasClass('selected') ) {
             $(this).removeClass('selected');
@@ -15,7 +14,6 @@ $(document).ready(function() {
     } );
 
 } );
-
 
 function restoreAjax(id , status, file) {
     $.ajax({

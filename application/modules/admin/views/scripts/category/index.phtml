@@ -23,15 +23,16 @@ $linkDelete = $this->baseUrl($this->currentController . '/delete/id');
             <table id="myTable" class="table table-triped table-bordered table-hover">
                 <thead class="thead-dark">
                     <tr>
+                        <th class="text-center" style="width: 20px;">ID</th>
                         <th>Tên thể loại</th>
                         <th class="text-center">Trạng thái</th>
                         <th class="text-center">Chức năng</th>
-                        <th class="text-center" style="width: 20px;">ID</th>
                     </tr>
                 </thead>
                 <tbody>
                     <?php foreach ($this->Items as $key => $val) : ?>
                         <tr>
+                            <td class="text-center"><?php echo $val['id']; ?></td>
                             <td><?php echo $val['name']; ?></td>
                             <td class="text-center" id="status-<?php echo $val['id'];?>" style="padding-top: 35px"><?php
                                 $btn =  ($val['status'] == 1) ? 'btn-success' : 'btn-danger';
@@ -46,8 +47,6 @@ $linkDelete = $this->baseUrl($this->currentController . '/delete/id');
                                 <a class="btn btn-sm btn-danger"  href="#" onclick="deleteFunction(<?php echo $val['id']; ?> , 'category')"><i
                                             class="fas fa-trash"></i></a>
                             </td>
-
-                            <td class="text-center"><?php echo $val['id']; ?></td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

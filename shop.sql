@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 15, 2021 lúc 02:04 AM
+-- Thời gian đã tạo: Th10 15, 2021 lúc 07:05 AM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 7.3.31
 
@@ -39,18 +39,19 @@ CREATE TABLE `category` (
   `created_by` tinyint(4) NOT NULL DEFAULT 0 COMMENT 'Người tạo',
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() COMMENT 'Ngày sửa',
   `updated_by` tinyint(4) NOT NULL DEFAULT 0 COMMENT 'Người sửa',
-  `status` tinyint(4) NOT NULL DEFAULT 2 COMMENT 'Trạng thái'
+  `status` tinyint(4) NOT NULL DEFAULT 2 COMMENT 'Trạng thái',
+  `is_delete` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `category`
 --
 
-INSERT INTO `category` (`id`, `name`, `slug`, `parentid`, `orders`, `metakey`, `metadesc`, `created_at`, `created_by`, `updated_at`, `updated_by`, `status`) VALUES
-(1, 'Chairs', '', 0, 0, '', '', '2021-11-09 06:19:02', 0, '2021-11-11 06:12:21', 0, 1),
-(2, 'Tables', '', 0, 0, '', '', '2021-11-09 07:05:26', 0, '2021-11-10 09:32:49', 0, 1),
-(3, 'Light', '', 0, 0, '', '', '2021-11-09 07:06:53', 0, '2021-11-11 06:12:13', 0, 1),
-(4, 'pots', '', 0, 0, '', '', '2021-11-09 07:35:01', 0, '2021-11-10 09:32:48', 0, 1);
+INSERT INTO `category` (`id`, `name`, `slug`, `parentid`, `orders`, `metakey`, `metadesc`, `created_at`, `created_by`, `updated_at`, `updated_by`, `status`, `is_delete`) VALUES
+(1, 'Chairs', '', 0, 0, '', '', '2021-11-09 06:19:02', 0, '2021-11-15 06:04:05', 0, 1, 0),
+(2, 'Tables', '', 0, 0, '', '', '2021-11-09 07:05:26', 0, '2021-11-15 05:05:12', 0, 1, 0),
+(3, 'Light', '', 0, 0, '', '', '2021-11-09 07:06:53', 0, '2021-11-15 01:59:45', 0, 1, 0),
+(4, 'pots', '', 0, 0, '', '', '2021-11-09 07:35:01', 0, '2021-11-10 09:32:48', 0, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -62,7 +63,6 @@ CREATE TABLE `product` (
   `id` int(10) UNSIGNED NOT NULL COMMENT 'Mã sản phẩm',
   `catid` int(10) UNSIGNED NOT NULL COMMENT 'Mã loại sản phẩm',
   `name` varchar(1000) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Tên sản phẩm',
-  `slug` varchar(1000) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Slug tên sản phẩm',
   `img` varchar(255) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Hình ảnh',
   `detail` mediumtext COLLATE utf8_unicode_ci NOT NULL COMMENT 'Chi tiết',
   `number` smallint(5) UNSIGNED NOT NULL COMMENT 'Số lượng',
@@ -74,18 +74,19 @@ CREATE TABLE `product` (
   `created_by` tinyint(3) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'Người tạo',
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() COMMENT 'Ngày sửa',
   `updated_by` tinyint(3) UNSIGNED NOT NULL DEFAULT 1 COMMENT 'Người sửa',
-  `status` tinyint(3) UNSIGNED NOT NULL DEFAULT 2 COMMENT 'Trạng thái'
+  `status` tinyint(3) UNSIGNED NOT NULL DEFAULT 2 COMMENT 'Trạng thái',
+  `is_delete` int(11) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Đang đổ dữ liệu cho bảng `product`
 --
 
-INSERT INTO `product` (`id`, `catid`, `name`, `slug`, `img`, `detail`, `number`, `price`, `pricesale`, `metakey`, `metadesc`, `created_at`, `created_by`, `updated_at`, `updated_by`, `status`) VALUES
-(1, 1, 'Modern Chair 1', '', 'product_1636438800.jpg', 'ádas', 1, 10, 5, 'ádasd', 'đâsd', '2021-11-09 06:20:00', 1, '2021-11-11 05:58:48', 1, 1),
-(2, 1, 'Modern Chair 2', '', 'product_1636438839.jpg', 'ádasd', 1, 10, 7, 'ádasd', 'ádasd', '2021-11-09 06:20:39', 1, '2021-11-11 05:58:29', 1, 1),
-(3, 2, 'Small Table', '', 'product_1636441603.jpg', 'ádasd', 1, 20, 15, 'ádasdads', 'asdadsasd', '2021-11-09 07:06:43', 1, '2021-11-10 08:35:32', 1, 1),
-(4, 3, 'Light', '', 'product_1636597131.jpg', 'đèn treo', 1, 13, 10, 'ádasdasd', 'ádasd', '2021-11-11 02:18:51', 1, '2021-11-11 02:18:51', 1, 1);
+INSERT INTO `product` (`id`, `catid`, `name`, `img`, `detail`, `number`, `price`, `pricesale`, `metakey`, `metadesc`, `created_at`, `created_by`, `updated_at`, `updated_by`, `status`, `is_delete`) VALUES
+(1, 1, 'Modern Chair 12', 'product_1636947727.jpg', 'ádas', 1, 10, 5, 'ádasd', 'đâsd', '2021-11-09 06:20:00', 1, '2021-11-15 04:39:30', 1, 1, 0),
+(2, 1, 'Modern Chair 2', 'product_1636438839.jpg', 'ádasd', 1, 10, 7, 'ádasd', 'ádasd', '2021-11-09 06:20:39', 1, '2021-11-15 04:36:29', 1, 1, 0),
+(3, 2, 'Small Table', 'product_1636441603.jpg', 'ádasd', 1, 20, 15, 'ádasdads', 'asdadsasd', '2021-11-09 07:06:43', 1, '2021-11-15 04:04:25', 1, 1, 0),
+(4, 3, 'Light', 'product_1636597131.jpg', 'đèn treo', 1, 13, 10, 'ádasdasd', 'ádasd', '2021-11-11 02:18:51', 1, '2021-11-15 04:04:26', 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -149,13 +150,13 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT cho bảng `category`
 --
 ALTER TABLE `category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Mã Loại', AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Mã Loại', AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Mã sản phẩm', AUTO_INCREMENT=6;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Mã sản phẩm', AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `user`
