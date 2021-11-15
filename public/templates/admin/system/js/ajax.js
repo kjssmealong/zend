@@ -1,6 +1,3 @@
-var base_url = window.location.origin;
-var pathArray = window.location.pathname.split( '/' );
-
 $(document).ready(function() {
     var table = $('#myTable').DataTable();
     $('#myTable tbody').on( 'click', 'tr', function () {
@@ -18,7 +15,7 @@ $(document).ready(function() {
 function restoreAjax(id , status, file) {
     $.ajax({
         type: "POST",
-        url: base_url + '/' + pathArray[1] + '/' + pathArray[2] + '/' + file + "/restore/id/"+id,
+        url: "./restore/id/"+id,
         data: 'id=' + id + '&status=' + status ,
         success: function (e) {
             var color = status ? 'btn-danger'  : 'btn-success';
@@ -68,7 +65,7 @@ function restoretrashAjax(id , file) {
             Swal.fire(
                 $.ajax({
                     type: "POST",
-                    url: base_url + '/' + pathArray[1] + '/' + pathArray[2] + '/' + file + "/restoretrash/id/"+id,
+                    url: "./restoretrash/id/"+id,
                     success: function (e) {
                         var table = $('#myTable').DataTable();
                         table.row('.selected').remove().draw( false );
@@ -98,7 +95,7 @@ function deltrashAjax(id , file) {
             Swal.fire(
                 $.ajax({
                     type: "POST",
-                    url: base_url + '/' + pathArray[1] + '/' + pathArray[2] + '/' + file + "/deltrash/id/"+id,
+                    url: "./deltrash/id/"+id,
                     success: function (e) {
                         var table = $('#myTable').DataTable();
                         table.row('.selected').remove().draw( false );
@@ -117,7 +114,7 @@ function deltrashAjax(id , file) {
 function deleteAjax(id, file) {
     $.ajax({
         type: "POST",
-        url: base_url + '/' + pathArray[1] + '/' + pathArray[2] + '/' + file +'/delete/id/'+id,
+        url: './delete/id/'+id,
         success: function (e) {
             var table = $('#myTable').DataTable();
             table.row('.selected').remove().draw( false );
