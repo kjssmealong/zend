@@ -9,7 +9,8 @@ class Admin_Model_Product extends Zend_Db_Table
     public function getListItem($arrParam = null, $option = null)
     {
         if ($option['task'] == 'product-list') {
-            $result = $this->fetchAll()->toArray();
+            $where = 'is_delete = 0';
+            $result = $this->fetchAll($where)->toArray();
         }
         return $result;
     }
@@ -17,7 +18,7 @@ class Admin_Model_Product extends Zend_Db_Table
     public function getListTrash($arrParam = null, $option = null)
     {
         if ($option['task'] == 'product-trash') {
-            $where = 'status = 0';
+            $where = 'is_delete = 1';
             $result = $this->fetchAll($where)->toArray();
         }
         return $result;
@@ -64,7 +65,7 @@ class Admin_Model_Product extends Zend_Db_Table
 
             $row = $this->fetchRow($where);
             $row->updated_at = date('Y-m-d H:i:s');
-            $row->status = 0;
+            $row->is_delete = 1;
             $row->save();
         }
 
@@ -72,6 +73,13 @@ class Admin_Model_Product extends Zend_Db_Table
             $row = $this->fetchRow($where);
             $row->updated_at = date('Y-m-d H:i:s');
             $row->status = (!$arrParam['status'])  ;
+            $row->save();
+
+        }
+        if ($option['task'] == 'product-restore-trash') {
+            $row = $this->fetchRow($where);
+            $row->updated_at = date('Y-m-d H:i:s');
+            $row->is_delete = 0;
             $row->save();
 
         }

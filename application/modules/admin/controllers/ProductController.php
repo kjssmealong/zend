@@ -67,6 +67,9 @@ class Admin_ProductController extends Mylib_Controller_Action
             }
             
         }
+        else{
+            echo "error";
+        }
     }
 
     public function uploadAction()
@@ -75,12 +78,14 @@ class Admin_ProductController extends Mylib_Controller_Action
             $upload = new Mylib_File_Upload();
             $upload->upload('picture',FILE_PATH);
         }
+        else{
+            echo "error";
+        }
     }
 
     public function editAction()
     {
         $this->view->CatItems = $this->tblCat->getListItem(null, array('task' => 'category-list'));
-
         $this->view->Item = $this->tblProduct->editIem($this->_arrParam, array('task' => 'product-edit'));
 
         if ($this->_request->isPost()) {
@@ -97,39 +102,62 @@ class Admin_ProductController extends Mylib_Controller_Action
             }
 
         }
+        else{
+            echo "error";
+        }
     }
 
     public function deleteAction()
     {
-        $this->view->Item = $this->tblProduct->editIem($this->_arrParam, array('task' => 'product-delete'));
+        $this->_helper->viewRenderer->setNoRender(true);
+        $this->_helper->layout->disableLayout();
 
         if ($this->_request->isPost()) {
             $this->tblProduct->saveItem($this->_arrParam, array('task' => 'product-delete'));
             echo json_encode($this->_arrParam);
         }
+        else{
+            echo "error";
+        }
     }
 
     public function restoreAction()
     {
-        $result = new stdClass();
-        $result->isSuccess = false;
-        $this->view->Item = $this->tblProduct->editIem($this->_arrParam, array('task' => 'product-restore'));
-
+        $this->_helper->viewRenderer->setNoRender(true);
+        $this->_helper->layout->disableLayout();
         if ($this->_request->isPost()) {
             $this->tblProduct->saveItem($this->_arrParam, array('task' => 'product-restore'));
-            $result->isSuccess = true;
-
+            echo json_encode($this->_arrParam);
         }
-        echo json_encode($this->_arrParam);
+        else{
+            echo "error";
+        }
+    }
+
+    public function restoretrashAction()
+    {
+        $this->_helper->viewRenderer->setNoRender(true);
+        $this->_helper->layout->disableLayout();
+        if ($this->_request->isPost()) {
+            $this->tblProduct->saveItem($this->_arrParam, array('task' => 'product-restore-trash'));
+            echo json_encode($this->_arrParam);
+        }
+        else{
+            echo "error";
+        }
     }
 
     public function deltrashAction()
     {
-        $this->view->Item = $this->tblProduct->editIem($this->_arrParam, array('task' => 'product-deltrash'));
+        $this->_helper->viewRenderer->setNoRender(true);
+        $this->_helper->layout->disableLayout();
 
         if ($this->_request->isPost()) {
             $this->tblProduct->deleteItem($this->_arrParam, array('task' => 'product-deltrash'));
             $this->_redirect($this->_currentController . '/trash');
+        }
+        else{
+            echo "error";
         }
     }
 }
