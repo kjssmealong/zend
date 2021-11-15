@@ -1,13 +1,13 @@
 function restoreAjax(id , status, file) {
     $.ajax({
         type: "POST",
-        url: 'http://localhost/zend/admin/' + file + '/restore/id/'+id,
+        url: "http://localhost/zend/admin/" + file + "/restore/id/"+id,
         data: 'id=' + id + '&status=' + status,
         success: function (e) {
             var color = status ? 'btn-danger'  : 'btn-success';
             var icon = status ?  'fa-toggle-off' : 'fa-toggle-on' ;
             var testStatus = status ? 0 : 1;
-            var test = "<a class='btn btn-sm " + color + "'href='#' onclick='restoreAjax(" + id + "," + testStatus + ")'><i class='fas " + icon +"'></i></a>";
+            var test = "<a class='btn btn-sm " + color + "'href='#'  onclick='restoreAjax(" + id + "," + testStatus + ",  `" +    file  + "`  )'><i class='fas " + icon +"'></i></a>";
             $('#status-' + id).html(test);
         },
     });
