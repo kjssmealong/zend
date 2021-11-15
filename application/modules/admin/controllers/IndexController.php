@@ -21,7 +21,7 @@ class Admin_IndexController extends Mylib_Controller_Action
 
             if ($info->access != 1) {
                 echo "Bạn không có quyền truy cập";
-                echo '&nbsp'. '<a href="/zend/user">Chuyển đến trang chủ</a>';
+                echo '&nbsp'. '<a href="./user">Chuyển đến trang chủ</a>';
                 die();
             }
         } else {

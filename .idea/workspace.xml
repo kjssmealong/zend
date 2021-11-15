@@ -6,15 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="e1dee964-e08d-462c-b024-273a522c7fa2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/configs/application.ini" beforeDir="false" afterPath="$PROJECT_DIR$/application/configs/application.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/admin/controllers/CategoryController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/controllers/CategoryController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/admin/controllers/ProductController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/controllers/ProductController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/admin/views/scripts/category/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/category/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/admin/views/scripts/category/trash.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/category/trash.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/index.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/index.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/trash.phtml" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/views/scripts/product/trash.phtml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/templates/admin/system/js/ajax.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/templates/admin/system/js/ajax.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/shop.sql" beforeDir="false" afterPath="$PROJECT_DIR$/shop.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amado-master.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/admin/controllers/IndexController.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/controllers/IndexController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/modules/admin/forms/CheckAuth.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/modules/admin/forms/CheckAuth.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +81,7 @@
       <workItem from="1636428553463" duration="16352000" />
       <workItem from="1636592488489" duration="3963000" />
       <workItem from="1636596526761" duration="16493000" />
+      <workItem from="1636958714936" duration="1112000" />
     </task>
     <servers />
   </component>

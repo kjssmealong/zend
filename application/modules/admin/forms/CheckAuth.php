@@ -6,13 +6,13 @@ class Admin_Form_CheckAuth{
         if ($auth->hasIdentity()) {
             $info = $auth->getIdentity();
             if ($info->access != 1) {
-                echo "bạn không đủ quyền truy cập";
-                echo '&nbsp'. '<a href="/zend/user">Chuyển đến trang chủ</a>';
+                echo $this->baseUrl();
+                echo '&nbsp'. '<a href="./user">Chuyển đến trang chủ</a>';
                 die();
             }
         } else {
             echo "Bạn chưa account";
-            echo '&nbsp'. '<a href="/zend/account">Login</a>';
+            echo '&nbsp'. '<a href="./account">Login</a>';
             die();
         }
     }
