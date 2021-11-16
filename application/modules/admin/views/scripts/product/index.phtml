@@ -25,6 +25,13 @@ $linkDel = $this->baseUrl($this->currentController . '/Delete/id/');
                     </div>
                 </div>
             </div>
+            <b><?php
+                if ($this->messagesError != null) {
+                    $errors = $this->formErrors($this->messagesError, array('id' => 'errors'));
+                    echo $errors;
+                }
+                ?>
+            </b>
             <div class="card-body">
                 <table id="myTable" class="table table-triped table-bordered table-hover">
                     <thead class="thead-dark">

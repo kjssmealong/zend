@@ -55,7 +55,7 @@ class Admin_LoginController extends Mylib_Controller_Action
                 $result = $auth->authenticate($authAdapter);
                 if (!$result->isValid()) {
                     $error = $result->getMessages();
-                    echo '<br>' . current($error);
+                    echo "<br> <p style='text-align: center; color: red;'><b>username or password incorrect</b></p>";
                 } else {
                     //lấy thông tin của tài khoản đưa vào ss
                     $omitColums = array('password');

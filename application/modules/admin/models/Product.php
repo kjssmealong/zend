@@ -73,6 +73,7 @@ class Admin_Model_Product extends Zend_Db_Table
             $row = $this->fetchRow($where);
             $row->updated_at = date('Y-m-d H:i:s');
             $row->status = (!$arrParam['status'])  ;
+
             $row->save();
 
         }

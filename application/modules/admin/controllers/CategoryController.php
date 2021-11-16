@@ -11,6 +11,8 @@ class Admin_CategoryController extends Mylib_Controller_Action{
     //đường dẫn action
     protected $_actionMain;
 
+    protected $listStatus = array('code' => '10000', 'msg' => 'OK');
+
     public function init(){
         $auth = new Admin_Form_CheckAuth();
         $auth->auth();
@@ -41,9 +43,20 @@ class Admin_CategoryController extends Mylib_Controller_Action{
 
     public function addAction(){
         if($this->_request->isPost()){
-            $tblCategory = new Admin_Model_Category();
-            $tblCategory->saveItem($this->_arrParam, array('task'=>'category-add'));
-            $this->_redirect($this->_actionMain);
+
+            $validator = new Admin_Form_ValidateProduct($this->_arrParam);
+            if ($validator->isError() == true) {
+                $this->view->messagesError = $validator->getMessagesError();
+                $this->view->Item = $validator->getData();
+
+            }
+//            else {
+//                $tblCategory = new Admin_Model_Category();
+//                $tblCategory->saveItem($this->_arrParam, array('task'=>'category-add'));
+//                $this->_redirect($this->_actionMain);
+//            }
+
+
         }
         else{
             echo "error";
@@ -67,58 +80,70 @@ class Admin_CategoryController extends Mylib_Controller_Action{
     public function deleteAction(){
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
-
+        $result = new stdClass();
         if($this->_request->isPost()){
             $tblCategory = new Admin_Model_Category();
             $tblCategory->saveItem($this->_arrParam, array('task'=>'category-delete'));
-            echo json_encode($this->_arrParam);
+            $result->status = $this->listStatus;
+            $result->data = $this->_arrParam;
         }
         else{
-            echo "error";
+            $result->status = 'fails';
+            $result->data = [];
         }
+        echo json_encode($result);
     }
 
     public function restoreAction(){
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
-
+        $result = [];
         if($this->_request->isPost()){
             $tblCategory = new Admin_Model_Category();
             $tblCategory->saveItem($this->_arrParam, array('task'=>'category-restore'));
-            echo json_encode($this->_arrParam);
-
+            $result['status'] = $this->listStatus;
+            $result['data'] = $this->_arrParam;
         }
         else{
-            echo "error";
+            $result['status'] = 'fails';
+            $result['data'] = [];
         }
+        echo json_encode($result);
     }
 
     public function restoretrashAction()
     {
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
+        $result = new stdClass();
         if ($this->_request->isPost()) {
             $tblCategory = new Admin_Model_Category();
             $tblCategory->saveItem($this->_arrParam, array('task'=>'category-restore-trash'));
-            echo json_encode($this->_arrParam);
+            $result->status = $this->listStatus;
+            $result->data = $this->_arrParam;
         }
         else{
-            echo "error";
+            $result->status = 'fails';
+            $result->data = [];
         }
+        echo json_encode($result);
     }
 
     public function deltrashAction(){
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
-
+        $result = new stdClass();
         if($this->_request->isPost()){
             $tblCategory = new Admin_Model_Category();
             $tblCategory->deleteItem($this->_arrParam, array('task'=>'category-deltrash'));
-            echo json_encode($this->_arrParam);
+            $result->status = $this->listStatus;
+            $result->data = $this->_arrParam;
         }
         else{
-            echo "error";
+            $result->status = 'fails';
+            $result->data = [];
         }
+        echo json_encode($result);
     }
 
 }

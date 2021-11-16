@@ -17,8 +17,12 @@ function restoreAjax(id, status) {
 
     axios({
         method: 'post',
-        url: "./restore/id",
-        data: 'id=' + id + '&status=' + status,
+        url: "./restore",
+        headers: {'Content-Type': 'application/json'},
+        params: {
+            id: id,
+            status: status
+        }
     }).then(function (response) {
         var color = status ? 'btn-danger' : 'btn-success';
         var icon = status ? 'fa-toggle-off' : 'fa-toggle-on';

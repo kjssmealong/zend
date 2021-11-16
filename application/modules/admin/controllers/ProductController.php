@@ -1,4 +1,5 @@
 <?php
+
 class Admin_ProductController extends Mylib_Controller_Action
 {
 
@@ -14,6 +15,7 @@ class Admin_ProductController extends Mylib_Controller_Action
 
     protected $tblCat;
     protected $tblProduct;
+    protected $listStatus = array('code' => '10000', 'msg' => 'OK');
 
     public function init()
     {
@@ -21,6 +23,7 @@ class Admin_ProductController extends Mylib_Controller_Action
         $auth->auth();
         //Mảng tham số nhận được ở mỗi action
         $this->_arrParam = $this->_request->getParams();
+
         //Đường dẫn controller
         $this->_currentController = '/' . $this->_arrParam['module'] . '/' . $this->_arrParam['controller'];
         //Đường dẫn của action chính
@@ -54,20 +57,18 @@ class Admin_ProductController extends Mylib_Controller_Action
 
         if ($this->_request->isPost()) {
             $validator = new Admin_Form_ValidateProduct($this->_arrParam);
-            if($validator->isError() == true){
+            if ($validator->isError() == true) {
                 $this->view->messagesError = $validator->getMessagesError();
                 $this->view->Item = $validator->getData();
 
-            }else
-            {
+            } else {
                 $tblProduct = new Admin_Model_Product();
                 $arrParam = $validator->getData(array('upload' => true));
                 $tblProduct->saveItem($arrParam, array('task' => 'product-add'));
                 $this->_redirect($this->_actionMain);
             }
-            
-        }
-        else{
+
+        } else {
             echo "error";
         }
     }
@@ -76,34 +77,31 @@ class Admin_ProductController extends Mylib_Controller_Action
     {
         if ($this->_request->isPost()) {
             $upload = new Mylib_File_Upload();
-            $upload->upload('picture',FILE_PATH);
-        }
-        else{
+            $upload->upload('picture', FILE_PATH);
+        } else {
             echo "error";
         }
     }
 
     public function editAction()
     {
+        $tblProduct = new Admin_Model_Product();
         $this->view->CatItems = $this->tblCat->getListItem(null, array('task' => 'category-list'));
-        $this->view->Item = $this->tblProduct->editIem($this->_arrParam, array('task' => 'product-edit'));
-
+        $this->view->Item = $tblProduct->editIem($this->_arrParam, array('task' => 'product-edit'));
         if ($this->_request->isPost()) {
             $validator = new Admin_Form_ValidateProduct($this->_arrParam);
-            if($validator->isError() == true){
+            if ($validator->isError() == true) {
                 $this->view->messagesError = $validator->getMessagesError();
                 $this->view->Item = $validator->getData();
 
-            }else
-            {
+            } else {
+                $tblProduct = new Admin_Model_Product();
                 $arrParam = $validator->getData(array('upload' => true));
-                $this->tblProduct->saveItem($arrParam, array('task' => 'product-edit'));
+                $tblProduct->saveItem($arrParam, array('task' => 'product-edit'));
                 $this->_redirect($this->_actionMain);
             }
-
-        }
-        else{
-            echo "error";
+        } else {
+            echo "errors";
         }
     }
 
@@ -111,54 +109,66 @@ class Admin_ProductController extends Mylib_Controller_Action
     {
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
-
+        $result = new stdClass();
         if ($this->_request->isPost()) {
             $this->tblProduct->saveItem($this->_arrParam, array('task' => 'product-delete'));
-            echo json_encode($this->_arrParam);
+            $result->status = $this->listStatus;
+            $result->data = $this->_arrParam;
+        } else {
+            $result->status = 'fails';
+            $result->data = [];
         }
-        else{
-            echo "error";
-        }
+        echo json_encode($result);
     }
 
     public function restoreAction()
     {
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
+        $result = new stdClass();
+        header("Content-Type:application/json");
+
         if ($this->_request->isPost()) {
             $this->tblProduct->saveItem($this->_arrParam, array('task' => 'product-restore'));
-            echo json_encode($this->_arrParam);
+            $result->status = $this->listStatus;
+            $data = $this->_arrParam;
+            $result->data = $data;
+        } else {
+            $result->status = 'fails';
+            $result->data = [];
         }
-        else{
-            echo "error";
-        }
+        echo json_encode($result);
     }
 
     public function restoretrashAction()
     {
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
+        $result = new stdClass();
         if ($this->_request->isPost()) {
             $this->tblProduct->saveItem($this->_arrParam, array('task' => 'product-restore-trash'));
-            echo json_encode($this->_arrParam);
+            $result->status = $this->listStatus;
+            $result->data = $this->_arrParam;
+        } else {
+            $result->status = 'fails';
+            $result->data = [];
         }
-        else{
-            echo "error";
-            die();
-        }
+        echo json_encode($result);
     }
 
     public function deltrashAction()
     {
         $this->_helper->viewRenderer->setNoRender(true);
         $this->_helper->layout->disableLayout();
-
+        $result = new stdClass();
         if ($this->_request->isPost()) {
             $this->tblProduct->deleteItem($this->_arrParam, array('task' => 'product-deltrash'));
-            echo json_encode($this->_arrParam);
+            $result->status = $this->listStatus;
+            $result->data = $this->_arrParam;
+        } else {
+            $result->status = 'fails';
+            $result->data = [];
         }
-        else{
-            echo "error";
-        }
+        echo json_encode($result);
     }
 }
