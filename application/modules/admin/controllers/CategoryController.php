@@ -43,20 +43,16 @@ class Admin_CategoryController extends Mylib_Controller_Action{
 
     public function addAction(){
         if($this->_request->isPost()){
-
-            $validator = new Admin_Form_ValidateProduct($this->_arrParam);
+            $validator = new Admin_Form_ValidateCategory($this->_arrParam);
             if ($validator->isError() == true) {
                 $this->view->messagesError = $validator->getMessagesError();
                 $this->view->Item = $validator->getData();
 
+            } else {
+                $tblCategory = new Admin_Model_Category();
+                $tblCategory->saveItem($this->_arrParam, array('task'=>'category-add'));
+                $this->_redirect($this->_actionMain);
             }
-//            else {
-//                $tblCategory = new Admin_Model_Category();
-//                $tblCategory->saveItem($this->_arrParam, array('task'=>'category-add'));
-//                $this->_redirect($this->_actionMain);
-//            }
-
-
         }
         else{
             echo "error";
@@ -68,9 +64,17 @@ class Admin_CategoryController extends Mylib_Controller_Action{
         $this->view->Item = $tblCategory->editIem($this->_arrParam , array('task'=>'category-edit'));
 
         if($this->_request->isPost()){
-            $tblCategory = new Admin_Model_Category();
-            $tblCategory->saveItem($this->_arrParam, array('task'=>'category-edit'));
-            $this->_redirect($this->_actionMain);
+            $validator = new Admin_Form_ValidateCategory($this->_arrParam);
+            if ($validator->isError() == true) {
+                $this->view->messagesError = $validator->getMessagesError();
+                $this->view->Item = $validator->getData();
+
+            } else {
+                $tblCategory = new Admin_Model_Category();
+                $tblCategory->saveItem($this->_arrParam, array('task'=>'category-edit'));
+                $this->_redirect($this->_actionMain);
+            }
+
         }
         else{
             echo "error";

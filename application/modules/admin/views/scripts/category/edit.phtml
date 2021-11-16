@@ -4,6 +4,12 @@ $linkBack = $this->baseUrl($this->currentController . '/index');
 $linkEdit = $this->baseUrl($this->currentController . '/edit/id/' . $row['id']);
 
 ?>
+<style>
+    #errors {
+        background-color: darkorange;
+        border: 1px solid;
+    }
+</style>
 <form name="appForm" action="" method="post" enctype="multipart/form-data">
     <div class="content-wrapper my-2">
         <div class="card">
@@ -20,6 +26,13 @@ $linkEdit = $this->baseUrl($this->currentController . '/edit/id/' . $row['id']);
                     </div>
                 </div>
             </div>
+            <b><?php
+                if ($this->messagesError != null) {
+                    $errors = $this->formErrors($this->messagesError, array('id' => 'errors'));
+                    echo $errors;
+                }
+                ?>
+            </b>
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-8">

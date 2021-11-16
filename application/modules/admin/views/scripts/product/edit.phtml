@@ -1,12 +1,11 @@
 <?php
 $row = $this->Item;
 
-var_dump($this->Item);
 $linkBack = $this->baseUrl($this->currentController . '/index');
 $linkEdit = $this->baseUrl($this->currentController . '/edit/id/' . $row['id']);
 
 $current_product_img = $this->formHidden('current_product_img', $row['img']);
-
+$img = $this->formHidden('img', $row['img']);
 $strcat = '';
 
 foreach ($this->CatItems as $rowcat) {
@@ -17,6 +16,12 @@ foreach ($this->CatItems as $rowcat) {
     }
 }
 ?>
+<style>
+    #errors {
+        background-color: darkorange;
+        border: 1px solid;
+    }
+</style>
 <form name="appForm" action="" method="post" enctype="multipart/form-data">
     <div class="content-wrapper my-2">
         <div class="card">
@@ -33,6 +38,13 @@ foreach ($this->CatItems as $rowcat) {
                     </div>
                 </div>
             </div>
+            <b><?php
+                if ($this->messagesError != null) {
+                    $errors = $this->formErrors($this->messagesError, array('id' => 'errors'));
+                    echo $errors;
+                }
+                ?>
+            </b>
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-8">
@@ -77,6 +89,7 @@ foreach ($this->CatItems as $rowcat) {
                             <label style="font-weight: bold;">Ảnh sản phẩm</label>
                             <img width="340" height="300" src="<?php echo $this->adminImgUrl . '/' . $row['img']; ?>" alt="">
                             <?php echo $current_product_img;?>
+                            <?php echo $img;?>
                             <input name="img" type="file" class="form-control" />
                         </div>
 

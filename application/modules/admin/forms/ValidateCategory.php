@@ -1,5 +1,5 @@
-<?php 
-class Admin_Form_ValidateProduct{
+<?php
+class Admin_Form_ValidateCategory{
 
     //Thuộc tính chứa thông báo lỗi
     protected $_messagesError = null;
@@ -19,41 +19,6 @@ class Admin_Form_ValidateProduct{
             $this->_messagesError['name']  = 'Name ' . current($message);
             $arrParam['name'] = ' ';
         }
-
-        //kiểm tra số lượng
-        $validator = new Zend_Validate();
-        $validator->addValidator(new Zend_Validate_NotEmpty(), true);
-
-        if(!$validator->isValid($arrParam['number'])){
-            $message = $validator->getMessages();
-            $this->_messagesError['number']  = 'number ' . current($message);
-            $arrParam['number'] = ' ';
-        }
-
-        //kiểm tra image
-        $upload = new Zend_File_Transfer_Adapter_Http();
-        $fileInfo = $upload->getFileInfo('img');
-        $fileName = $fileInfo['img']['name'];
-        if(!empty($fileName)){            
-            $upload->addValidator('Extension', true, array('jpg', 'gif', 'png', 'img'));
-            $upload->addValidator('Size', true, array('min'=> '2KB', 'max'=> '1000KB'), 'img');
-            if(!$upload->isValid('img')){
-                $message = $upload->getMessages();
-                $this->_messagesError['img']  = current($message);
-            }
-
-        }
-
-        //kiểm tra tye
-        $validator = new Zend_Validate();
-        $validator->addValidator(new Zend_Validate_NotEmpty(), true);
-
-        if(!$validator->isValid($arrParam['catid'])){
-            $message = $validator->getMessages();
-            $this->_messagesError['catid']  = 'Category ' . current($message);
-            $arrParam['catid'] = '';
-        }
-
         //truyền giá trị vào arrayData
         $this->_arrData = $arrParam;
     }
@@ -86,10 +51,10 @@ class Admin_Form_ValidateProduct{
         $fileInfo = $upload->getFileInfo('img');
         $fileName = $fileInfo['img']['name'];
         if(!empty($fileName)){
-        $fileName = $upload->upload('img', $upload_dir, array('task' => 'rename'), 'product_');
-        if($this->_arrData['action'] == 'edit'){
-            $upload->removeFile($upload_dir . '/' . $this->_arrData['current_product_img']);
-        }
+            $fileName = $upload->upload('img', $upload_dir, array('task' => 'rename'), 'product_');
+            if($this->_arrData['action'] == 'edit'){
+                $upload->removeFile($upload_dir . '/' . $this->_arrData['current_product_img']);
+            }
         }else{
             if($this->_arrData['action'] == 'edit'){
                 $fileName = $this->_arrData['current_product_img'];
