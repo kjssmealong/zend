@@ -41,7 +41,8 @@ class Admin_ProductController extends Mylib_Controller_Action
 
     public function indexAction()
     {
-        $this->view->Items = $this->tblProduct->getListItem(null, array('task' => 'product-list'));
+        $tblProduct = new Admin_Model_Product();
+        $this->view->Items = $tblProduct->getListItem(null, array('task' => 'product-list'));
     }
 
     public function trashAction()

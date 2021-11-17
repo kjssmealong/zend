@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 15, 2021 lúc 07:05 AM
+-- Thời gian đã tạo: Th10 17, 2021 lúc 02:17 AM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 7.3.31
 
@@ -83,10 +83,11 @@ CREATE TABLE `product` (
 --
 
 INSERT INTO `product` (`id`, `catid`, `name`, `img`, `detail`, `number`, `price`, `pricesale`, `metakey`, `metadesc`, `created_at`, `created_by`, `updated_at`, `updated_by`, `status`, `is_delete`) VALUES
-(1, 1, 'Modern Chair 12', 'product_1636947727.jpg', 'ádas', 1, 10, 5, 'ádasd', 'đâsd', '2021-11-09 06:20:00', 1, '2021-11-15 04:39:30', 1, 1, 0),
-(2, 1, 'Modern Chair 2', 'product_1636438839.jpg', 'ádasd', 1, 10, 7, 'ádasd', 'ádasd', '2021-11-09 06:20:39', 1, '2021-11-15 04:36:29', 1, 1, 0),
-(3, 2, 'Small Table', 'product_1636441603.jpg', 'ádasd', 1, 20, 15, 'ádasdads', 'asdadsasd', '2021-11-09 07:06:43', 1, '2021-11-15 04:04:25', 1, 1, 0),
-(4, 3, 'Light', 'product_1636597131.jpg', 'đèn treo', 1, 13, 10, 'ádasdasd', 'ádasd', '2021-11-11 02:18:51', 1, '2021-11-15 04:04:26', 1, 1, 0);
+(1, 1, 'Modern Chair 1', 'product_1637111672.jpg', 'asdasd', 1, 15, 12, 'dsasdasd', 'asdasda', '2021-11-17 01:14:32', 1, '2021-11-17 01:14:32', 1, 1, 0),
+(2, 1, 'Modern Chair 2', 'product_1637111703.jpg', 'sdddsadasd', 1, 20, 17, 'adadasd', 'asdasd', '2021-11-17 01:15:03', 1, '2021-11-17 01:15:03', 1, 1, 0),
+(3, 2, 'Small Table', 'product_1637111733.jpg', 'fasdsadas', 1, 22, 20, 'sdasdasd', 'asdasda', '2021-11-17 01:15:33', 1, '2021-11-17 01:15:33', 1, 1, 0),
+(4, 3, 'Light ', 'product_1637111762.jpg', 'dasdfasdfa', 1, 18, 15, 'asdasdasd', 'adsdasd', '2021-11-17 01:16:02', 1, '2021-11-17 01:16:02', 1, 1, 0),
+(5, 4, ' Plots 1', 'product_1637111833.jpg', 'Plot 1', 1, 12, 10, 'asdasdas', 'asdasd', '2021-11-17 01:16:39', 1, '2021-11-17 01:17:13', 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -156,7 +157,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT cho bảng `product`
 --
 ALTER TABLE `product`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Mã sản phẩm', AUTO_INCREMENT=9;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT COMMENT 'Mã sản phẩm', AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `user`
