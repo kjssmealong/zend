@@ -15,7 +15,7 @@ class Admin_ProductController extends Mylib_Controller_Action
 
     protected $tblCat;
     protected $tblProduct;
-    protected $listStatus = array('code' => '10000', 'msg' => 'OK');
+    protected $listStatus = array('code' => '200', 'msg' => 'OK');
 
     public function init()
     {

@@ -11,7 +11,7 @@ class Admin_CategoryController extends Mylib_Controller_Action{
     //đường dẫn action
     protected $_actionMain;
 
-    protected $listStatus = array('code' => '10000', 'msg' => 'OK');
+    protected $listStatus = array('code' => '200', 'msg' => 'OK');
 
     public function init(){
         $auth = new Admin_Form_CheckAuth();
